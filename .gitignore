@@ -1,0 +1,28 @@
+# NetBeans
+nbproject/private/
+nbbuild/
+build/
+dist/
+
+# GlassFish runtime
+glassfish/
+
+# IDE/system files
+.classpath
+.project
+.settings/
+*.swp
+
+# Compiled Java files
+*.class
+
+# Local database/config files
+*.sql
+*.bak
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

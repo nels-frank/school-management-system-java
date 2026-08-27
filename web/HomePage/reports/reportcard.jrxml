@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="972" pageHeight="842" columnWidth="932" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="00358960-5b62-44c4-800e-5d58152671ee">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="90"/>
+	<property name="ireport.y" value="0"/>
+	<field name="subjects" class="java.lang.String"/>
+	<field name="ass1" class="java.lang.String"/>
+	<field name="ass2" class="java.lang.String"/>
+	<field name="test1" class="java.lang.String"/>
+	<field name="ass3" class="java.lang.String"/>
+	<field name="ass4" class="java.lang.String"/>
+	<field name="test2" class="java.lang.String"/>
+	<field name="ass5" class="java.lang.String"/>
+	<field name="ass6" class="java.lang.String"/>
+	<field name="test3" class="java.lang.String"/>
+	<field name="exam" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<field name="classavg" class="java.lang.String"/>
+	<field name="highest" class="java.lang.String"/>
+	<field name="lowest" class="java.lang.String"/>
+	<field name="grade" class="java.lang.String"/>
+	<field name="remark" class="java.lang.String"/>
+	<field name="position" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="489" y="4" width="100" height="20" uuid="776892ad-488e-4489-b271-e6da1010e391"/>
+				<text><![CDATA[Report Card]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="389" y="0" width="100" height="20" uuid="b5448807-0dbc-4f92-97a2-f7a2686fcff3"/>
+				<text><![CDATA[Report Card]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="0" width="78" height="20" uuid="80d2f1e4-f3d9-43a3-83bb-a48fffe544e2"/>
+				<text><![CDATA[subjects]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="2" width="38" height="20" uuid="338b27c9-f02d-4694-9dd2-44a2d60bc0ac"/>
+				<text><![CDATA[test1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="2" width="42" height="20" uuid="d720c39a-6e11-429f-9251-8b1576a3b4dc"/>
+				<text><![CDATA[ass3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="302" y="2" width="44" height="20" uuid="f7967a95-bbee-43d6-ad99-b28de4e62cc4"/>
+				<text><![CDATA[ass4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="2" width="44" height="20" uuid="81950d0a-e06d-4ec8-9e38-364ba8e3c86a"/>
+				<text><![CDATA[test2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="2" width="41" height="20" uuid="8c86d489-35cb-4b98-97ba-9398505df4cc"/>
+				<text><![CDATA[ass5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="2" width="32" height="20" uuid="ae21ef11-bd2b-430d-a2c9-d7187f02726f"/>
+				<text><![CDATA[ass6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="2" width="52" height="20" uuid="2a67e72a-a30b-4aa2-a1b1-d37c91b6f32c"/>
+				<text><![CDATA[test3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="529" y="2" width="59" height="20" uuid="3065641b-1e79-4604-90f5-c921b2ffd09d"/>
+				<text><![CDATA[exam]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="588" y="2" width="52" height="20" uuid="59bfc412-d20b-4dd9-ab32-54fdecf98978"/>
+				<text><![CDATA[total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="630" y="2" width="53" height="20" uuid="8b5e51ca-f3c9-4c5b-b3b8-e2f3c3f6bb4e"/>
+				<text><![CDATA[classavg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="677" y="2" width="43" height="20" uuid="a8b97841-cdd2-4136-8d52-ad90cda39af7"/>
+				<text><![CDATA[highest]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="727" y="2" width="41" height="20" uuid="c1fb61b7-afc5-4370-8b87-3a86a83722d6"/>
+				<text><![CDATA[lowest]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="772" y="2" width="47" height="20" uuid="d806657e-4168-46fe-b4d2-5246e4466e11"/>
+				<text><![CDATA[position]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="823" y="2" width="53" height="20" uuid="d98beaf5-cbf3-41b1-848f-19faa49e46a3"/>
+				<text><![CDATA[grade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="876" y="2" width="53" height="20" uuid="0f8d27a4-3df0-4902-b230-9f25467d202c"/>
+				<text><![CDATA[remark]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="2" width="51" height="20" uuid="3b9c6f85-ece5-4df3-8e15-b46b6e2d92f9"/>
+				<text><![CDATA[ass1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="2" width="47" height="20" uuid="704d2c3d-c8cb-4131-af40-7f6e8889d926"/>
+				<text><![CDATA[ass2]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="78" height="20" uuid="49ec3b6f-9b76-4d9d-b077-b5672955812b"/>
+				<textFieldExpression><![CDATA[$F{subjects}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="1" width="42" height="20" uuid="cf209c23-e0d0-4760-8637-de745df97350"/>
+				<textFieldExpression><![CDATA[$F{test1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="257" y="0" width="47" height="20" uuid="f637848f-2d20-4a76-b68b-14137a225082"/>
+				<textFieldExpression><![CDATA[$F{ass3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="304" y="0" width="43" height="20" uuid="0d4c505e-a1bf-4017-b3ae-2ed0711370e7"/>
+				<textFieldExpression><![CDATA[$F{ass4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="0" width="42" height="20" uuid="144942a1-c365-4653-b54d-6703a7b86d2d"/>
+				<textFieldExpression><![CDATA[$F{test2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="394" y="1" width="43" height="20" uuid="e6abc9a5-6698-4327-88cd-635d885c6d55"/>
+				<textFieldExpression><![CDATA[$F{ass5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="3" width="32" height="20" uuid="7fb49c70-2948-4ae2-b6fb-aa03fc60773e"/>
+				<textFieldExpression><![CDATA[$F{ass6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="3" width="55" height="20" uuid="e6ee8c61-5da7-4571-aa66-ba4023f5c4cf"/>
+				<textFieldExpression><![CDATA[$F{test3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="529" y="3" width="59" height="20" uuid="85936cab-299a-4718-a04e-db9fefd6e65d"/>
+				<textFieldExpression><![CDATA[$F{exam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="588" y="4" width="53" height="20" uuid="ad6b3ef6-3922-4ec9-89fd-37f0b7106b09"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="634" y="4" width="50" height="20" uuid="ba9b83b2-f14e-48cc-ab15-af18555bea5e"/>
+				<textFieldExpression><![CDATA[$F{classavg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="677" y="1" width="43" height="20" uuid="3e308a26-a210-4dec-879f-63324dbc4cd7"/>
+				<textFieldExpression><![CDATA[$F{highest}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="724" y="3" width="44" height="20" uuid="afdcfe8c-99db-442e-91ff-12d56e175a71"/>
+				<textFieldExpression><![CDATA[$F{lowest}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="773" y="2" width="46" height="20" uuid="068d7eaa-4eaf-4a78-83c6-a564eed38d44"/>
+				<textFieldExpression><![CDATA[$F{position}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="823" y="3" width="53" height="20" uuid="de33cd08-6a25-41bd-ba14-2767f06d80e2"/>
+				<textFieldExpression><![CDATA[$F{grade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="878" y="4" width="51" height="20" uuid="b0664261-d2de-4202-9fa9-cfcecad799bb"/>
+				<textFieldExpression><![CDATA[$F{remark}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="6" width="50" height="20" uuid="8ecca339-18fa-46ca-98cf-bb7ccb601cd0"/>
+				<textFieldExpression><![CDATA[$F{ass1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="162" y="5" width="37" height="20" uuid="8f613d2a-90ea-481e-93df-50a28b493793"/>
+				<textFieldExpression><![CDATA[$F{ass2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>HOME</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/dropdown/css/style.css"/>
+  <link rel="stylesheet" href="assets/theme/css/style.css"/>
+   <link href="designs/css/animate.css" rel="stylesheet" />
+   <link href="designs/css/style.css" rel="stylesheet"/>  
+   <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+   <!-- template skin -->       
+   <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+       <div id="page-top" data-spy="scroll" data-target=".navbar-custom">
+            <div id="wrapper">
+
+        <nav class="navbar navbar-dropdown navbar-fixed-top" style=" background-color:black">
+        <div class="container">
+
+            <div class="mbr-table">
+                <div class="mbr-table-cell">
+
+                    <div class="navbar-brand">                     
+                        <a class="navbar-caption"><h4 style="color:yellow"><b>WELCOME TO SCHOOL FEES MANAGEMENT SYSTEM</b></h4></a>
+                    </div>
+                </div>
+                <div class="mbr-table-cell">
+                 
+                  <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
+                      <li class="nav-item nav-btn"><a class="nav-link btn btn-white btn-white-outline" href="../Students/index.jsf"><h5><b>HOME</b></h5></a></li>&nbsp;&nbsp;
+                  <li class="nav-item dropdown">
+                      <a class="nav-link btn btn-white btn-white-outline" data-toggle="dropdown-submenu" aria-expanded="false"><h5><b> STUDENTS</b></h5></a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item"  href="../Students/createstudents.jsf" target="main"><h5><b>REGISTRATION</b></h5></a>
+                      <a class="dropdown-item"  href="../Students/viewClassstudent.jsf" target="main"><h5><b>CLASS STUDENTS</b></h5></a>
+                      <a class="dropdown-item"  href="../Students/Promotion.jsf" target="main"><h5><b>PROMOTION</b></h5></a>  
+                      <a class="dropdown-item"  href="../Students/demotion.jsf" target="main"><h5><b>DEMOTION</b></h5></a>
+                  </div>
+                  </li> 
+                      <li class="nav-item nav-btn"><a class="nav-link btn btn-white btn-white-outline" href="Login.jsf"><h5><b>FEES MANAGEMENT</b></h5></a></li>
+                      <li class="nav-item nav-btn"><a class="nav-link btn btn-white btn-white-outline" href="../Result/Login.jsf"><h5><b>RESULT COMPUTATION</b></h5></a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+                <center>Registration Page</center>
+                <!-- Section: intro -->
+                <section id="intro" class="intro">
+                    <div class="intro-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-6">
+                                    <div class="form-wrapper">
+                                        <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+
+                                            <div class="panel panel-skin">
+                                                <div class="panel-heading" style="background: #0e3344" >
+                                                    <h5 class="panel-title"><span class="fa fa-pencil-square-o"></span> Login <small>(It's free!)</small></h5>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                                                    <div id="errormessage"></div>
+
+                                                    <h:form role="form" class="contactForm lead">
+                                                        <div class="row">
+                                                          
+                                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Username</label>
+                                                                    <h:inputText  class="form-control input-md"  value="#{userController.username}" required="true" requiredMessage="First name is required"/>
+                                                                    <div class="validation"></div>
+                                                                </div>
+                                                            </div>
+                                                              <div class="col-xs-6 col-sm-6 col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Password</label>
+                                                                    <h:inputSecret  class="form-control input-md"  value="#{userController.password}" required="true" requiredMessage="registration number is required"/>
+                                                                    <div class="validation"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <h:commandLink action="#{userController.isValid()}" value="Login" class="btn btn-skin btn-block btn-lg" style="background: orangered"/>  
+                                                        <h6><h:outputText value="#{userController.jdk}" style="color: orangered"/></h6> 
+                                                    </h:form>
+                                                </div>
+                                            </div>				
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>		
+                        </div>
+                    </div>		
+                </section>
+
+
+
+                <footer>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="wow fadeInDown" data-wow-delay="0.1s">
+                                    <div class="widget">
+                                        <h5>About NelsPeace College</h5>
+                                        <p>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="wow fadeInDown" data-wow-delay="0.1s">
+                                    <div class="widget">
+                                        <h5>Information</h5>
+                                        <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">The School History</a></li>
+                                            <li><a href="#">About the Propretor</a></li>
+                                            <li><a href="#">Rules and Regulations</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="wow fadeInDown" data-wow-delay="0.1s">
+                                    <div class="widget">
+                                        <h5>NelsPeace College</h5>
+                                        <ul>
+                                            <li>
+                                                <span class="fa-stack fa-lg">
+                                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                                    <i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
+                                                </span> Monday, Wednesday and Thursday: 7am  4pm
+                                            </li>
+                                            <div class="wow fadeInDown" data-wow-delay="0.1s">
+                                    <div class="widget">
+                                        <h5>Follow us</h5>
+                                        <ul class="company-social">
+                                            <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li class="social-google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                            <li class="social-vimeo"><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+                                            <li class="social-dribble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="wow fadeInDown" data-wow-delay="0.1s">
+                                    <div class="widget">
+                                        <h5>The School Location</h5>
+                                        <p>Behind NKST HOSPITAL ADIKPO</p>		
+
+                                    </div>
+                                </div>
+                                
+                                <li>
+                                                <span class="fa-stack fa-lg">
+                                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                                    <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                                                </span> +2349075139408
+                                            </li>
+                                            <li>
+                                                <span class="fa-stack fa-lg">
+                                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                                </span> nelsfrank247@gmail.com
+                                            </li>
+                                
+                            </div>
+                        </div>	
+                    </div>
+                    <div class="sub-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                    <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                                        <div class="text-left">
+                                            <p>&copy;Copyright - NelsPeace Software Innovation. All rights reserved.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                    <div class="wow fadeInRight" data-wow-delay="0.1s">
+                                        <div class="text-right">
+                                            <div class="credits">
+                                                <!-- 
+                                                    All the links in the footer should remain intact. 
+                                                    You can delete the links only if you purchased the pro version.
+                                                    Licensing information: https://bootstrapmade.com/license/
+                                                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medicio
+                                                -->
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>	
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+            <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+           <!-- Core JavaScript Files -->
+            <script src="designs/js/jquery.min.js"></script>	 
+            <script src="designs/js/bootstrap.min.js"></script>
+            <script src="designs/js/jquery.easing.min.js"></script>
+            <script src="designs/js/wow.min.js"></script>
+            <script src="designs/js/jquery.scrollTo.js"></script>
+            <script src="designs/js/jquery.appear.js"></script>
+            <script src="designs/js/stellar.js"></script>
+            <script src="designs/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+            <script src="designs/js/owl.carousel.min.js"></script>
+            <script src="designs/js/nivo-lightbox.min.js"></script>
+            <script src="designs/js/custom.js"></script>
+            <script src="designs/contactform/contactform.js"></script>
+            
+   <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/SmoothScroll.js"></script>
+  <script src="assets/viewportChecker/jquery.viewportchecker.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script>
+  <script src="assets/jquery-mb-ytplayer/jquery.mb.YTPlayer.min.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <script src="assets/mobirise-slider-video/script.js"></script>
+            
+        <script>
+            $(document).on("ready", function () {
+                $('select').material_select();
+            });
+            $('.datepicker').pickadate({
+                selectMonths: true, // Creates a dropdown to control month
+                selectYears: 200 // Creates a dropdown of 15 years to control year
+            });
+        </script>
+
+        </div>
+    </h:body>
+</html>
+

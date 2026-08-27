@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>UPDATE STUDENTS</title>
+        <link rel="stylesheet" href="css/materialize.min.css"/>
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <link rel="stylesheet" href="css/fonts.googleapis.com/css?family=Montserrat"/>
+    </h:head>
+    <h:body style=" background-color:#333333;color: yellowgreen">
+        <h:form>
+            <div class="row " style=" margin-left: 10%; margin-top:4% ">
+                <div class="col s12 m4">
+                    <h4>Update Subject</h4>
+                    <h:inputText value="#{subjectsController.subjectname}" style=" margin-top:0px;">
+                        <f:passThroughAttribute name="placeholder" value="Subject Name..."/>
+                    </h:inputText>                   
+                    <h:selectOneMenu value="#{subjectsController.level}">
+                        <f:selectItem itemValue="" itemLabel="Select Level"/>
+                            <f:selectItem itemValue="10" itemLabel="Pre-Nursery"/>
+                            <f:selectItem itemValue="101" itemLabel="Nursery One"/>
+                            <f:selectItem itemValue="102" itemLabel="Nursery Two"/>
+                            <f:selectItem itemValue="103" itemLabel="Nursery Three"/>
+                            <f:selectItem itemValue="100" itemLabel="Primary One"/>
+                            <f:selectItem itemValue="200" itemLabel="Primary Two"/>
+                            <f:selectItem itemValue="300" itemLabel="Primary Three"/>
+                            <f:selectItem itemValue="400" itemLabel="Primary Four"/>
+                            <f:selectItem itemValue="500" itemLabel="Primary Five"/>
+                            <f:selectItem itemValue="600" itemLabel="Primary Six"/> 
+                            <f:selectItem itemValue="700" itemLabel="Primary seven"/>                      
+                    </h:selectOneMenu>
+
+                    <h:selectOneMenu value="#{subjectsController.category}">
+                        <f:selectItem itemLabel="Select Department"/>
+                        <f:selectItem itemValue="Arts" itemLabel="Arts"/>
+                        <f:selectItem itemValue="Commercial" itemLabel="Commercial"/>
+                        <f:selectItem itemValue="Science" itemLabel="Science"/>
+                        <f:selectItem itemValue="General" itemLabel="General"/>
+                    </h:selectOneMenu>
+                    <h:commandButton class="waves-effect waves-light btn"  action="allSubject.jsf" style="background: #0d253d" value="BACK">&nbsp;&nbsp;&nbsp;&nbsp;
+                    </h:commandButton>
+                    <h:commandButton class="waves-effect waves-light btn"  action="#{subjectsController.updateSubjects()}" style="background: #0d253d" value="UPDATE">
+                    </h:commandButton>
+                    <h6><h:outputText value="#{subjectsController.msg}" style="color: orangered"/></h6>
+                </div>
+            </div>
+
+        </h:form>
+
+        <script>
+            $(document).on("ready", function () {
+                $('select').material_select();
+            });
+        </script>
+    </h:body>
+</html>
+

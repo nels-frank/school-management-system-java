@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>ANNUAL SCORES</title>
+        <link rel="shortcut icon" href="images/Jac Logo.JPG" type="image/x-icon"/>
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <style type="text/css">
+
+           tr.oddrows {
+                background-color: #333333;
+                color: yellowgreen;
+            }
+
+
+            tr.evenrows {
+                background-color: #0d253d;
+                color: white;
+            }
+            table{
+                width: 100%
+            }
+            table.people th{
+                background-color: #0d253d;
+                color: white;
+                height: 10px;
+            }
+            a{
+                color:white;
+            }
+        </style>
+    </h:head>
+    <h:body style="background: #333333;color: yellowgreen">
+        <h:form>
+          <div class="row">
+          <div class="col-3" style=" margin-top: 3%; margin-left: 2%">
+               
+                    <h:selectOneMenu value="#{computeresultController.acasession}" onchange="submit()" class="form-control">
+                        <f:selectItem itemValue="" itemLabel="Select Session"/>
+                        <f:selectItem itemValue="2019/2020" itemLabel="2019/2020"/>
+                        <f:selectItem itemValue="2020/2021" itemLabel="2020/2021"/>
+                        <f:selectItem itemValue="2021/2022" itemLabel="2021/2022"/>
+                        <f:selectItem itemValue="2022/2023" itemLabel="2022/2023"/>
+                        <f:selectItem itemValue="2023/2024" itemLabel="2023/2024"/>                       
+                        <f:selectItem itemValue="2024/2025" itemLabel="2024/2025"/>
+                        <f:selectItem itemValue="2025/2026" itemLabel="2025/2026"/>
+                        <f:selectItem itemValue="2026/2027" itemLabel="2026/2027"/>
+                        <f:selectItem itemValue="2027/2028" itemLabel="2027/2028"/>
+                        <f:selectItem itemValue="2028/2029" itemLabel="2028/2029"/>                      
+                        <f:selectItem itemValue="2029/2030" itemLabel="2029/2030"/>
+                        <f:selectItem itemValue="2030/2031" itemLabel="2030/2031"/>
+                        <f:selectItem itemValue="2031/2032" itemLabel="2031/2032"/>
+                        <f:selectItem itemValue="2032/2033" itemLabel="2032/2033"/>
+                        <f:selectItem itemValue="2033/2034" itemLabel="2033/2034"/>                       
+                        <f:selectItem itemValue="2034/2035" itemLabel="2034/2035"/>
+                        <f:selectItem itemValue="2035/2036" itemLabel="2035/2036"/>
+                        <f:selectItem itemValue="2036/2037" itemLabel="2036/2037"/>
+                        <f:selectItem itemValue="2037/2038" itemLabel="2037/2038"/>
+                        <f:selectItem itemValue="2038/2039" itemLabel="2038/2039"/>
+                        <f:selectItem itemValue="2039/2040" itemLabel="2039/2040"/>
+                    </h:selectOneMenu>  
+                    
+                    <h:selectOneMenu value="#{computeresultController.level}" onchange="submit()" class="form-control">
+                        <f:selectItem itemValue="" itemLabel="Select Level"/>
+                         <f:selectItem itemValue="10" itemLabel="Pre-Nursery"/>
+                            <f:selectItem itemValue="101" itemLabel="Nursery One"/>
+                            <f:selectItem itemValue="102" itemLabel="Nursery Two"/>
+                            <f:selectItem itemValue="103" itemLabel="Nursery Three"/>
+                            <f:selectItem itemValue="100" itemLabel="Primary One"/>
+                            <f:selectItem itemValue="200" itemLabel="Primary Two"/>
+                            <f:selectItem itemValue="300" itemLabel="Primary Three"/>
+                            <f:selectItem itemValue="400" itemLabel="Primary Four"/>
+                            <f:selectItem itemValue="500" itemLabel="Primary Five"/>
+                            <f:selectItem itemValue="600" itemLabel="Primary Six"/>
+                            <f:selectItem itemValue="1" itemLabel="Basic 7"/>
+                            <f:selectItem itemValue="2" itemLabel="Basic 8"/>
+                            <f:selectItem itemValue="3" itemLabel="Basic 9"/>
+                            <f:selectItem itemValue="4" itemLabel="SSS 1"/>
+                            <f:selectItem itemValue="5" itemLabel="SSS 2"/>
+                            <f:selectItem itemValue="6" itemLabel="SSS 3"/>
+                            <f:selectItem itemValue="7" itemLabel="Pure Science"/>
+                        <f:selectItem itemValue="8" itemLabel="Social Science"/>
+                        <f:selectItem itemValue="9" itemLabel="Arts"/>
+                        <f:selectItem itemValue="11" itemLabel="Extra class"/>
+                    </h:selectOneMenu>
+                    
+                    <h:selectOneMenu value="#{computeresultController.classcode}" onchange="submit()" class="form-control">
+                        <f:selectItem itemValue="" itemLabel="Select Class"/>
+                        <f:selectItems value="#{computeresultController.classByLevel}" var="class" itemValue="#{class.classcode}" itemLabel="#{class.classcode}"/>
+                    </h:selectOneMenu>
+              
+                     <h:selectOneMenu value="#{computeresultController.subjects}" onchange="submit()" class="form-control">
+                        <f:selectItem itemValue="" itemLabel="Select Subject"/>
+                        <f:selectItems value="#{computeresultController.allSubjects}" var="sub" itemValue="#{sub.subjectname}" itemLabel="#{sub.subjectname}"/>
+                    </h:selectOneMenu>
+              <h:commandButton class="waves-effect waves-light btn" style=" background: yellowgreen; cursor: pointer" action="#{computeresultController.setAnnual()}"   value="Set Annual">
+                    </h:commandButton>
+                </div>
+                    <div class="col s12 m2" style=" margin-top: 3%">
+                        <h:commandButton class="waves-effect waves-light btn" style=" background: yellowgreen; cursor: pointer " action="#{computeresultController.setAnnualPosition()}"  value="Compute Result">
+                    </h:commandButton> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h:commandButton class="waves-effect waves-light btn" style=" background: orangered; cursor: pointer" action="#{computeresultController.deleteAnnualresult()}" value="Clear Result">      
+                    </h:commandButton>                 
+                </div>
+          </div>
+          
+            <div class="row ">
+                <div class="col-12"  >
+                    SUBJECT: <h:outputText value="#{computeresultController.subjects}"/>   CLASS: <h:outputText value="#{computeresultController.classcode}"/>
+                    <h:dataTable binding="#{table}" value="#{computeresultController.allanualresult}" var="stud" rowClasses="oddrows,evenrows" rules="all" width="100%" styleClass="people" style="border:1px " >
+                    <h:column>
+                            <f:facet name="header">
+                               SN
+                            </f:facet>
+    <center>   <h:outputText value="#{table.rowIndex+1}"/> </center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Name of Pupils<span style="color: #333333">.........</span>
+                            </f:facet>
+                          
+                            #{stud.name}
+                    
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">
+                                I TERM(100)
+                            </f:facet>
+                            <center>        #{stud.firsttermscore}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                               II TERM(100)
+                            </f:facet>
+                            <center>    #{stud.secondtermscore}</center>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header">
+                              III TERM(100)
+                            </f:facet>
+                            <center>     #{stud.thirdtemscore}</center>
+                        </h:column>                        
+                         
+                        <h:column>
+                            <f:facet name="header">
+                                Total (300%)
+                            </f:facet>
+                            <center> #{stud.total}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                AVG
+                            </f:facet>
+                            <center> #{stud.avg}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                CLASS AVG
+                            </f:facet>
+                            <center> #{stud.classavg}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Highest
+                            </f:facet>
+                            <center> #{stud.highestavg}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Lowest
+                            </f:facet>
+                            <center> #{stud.lowestavg}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Position
+                            </f:facet>
+                            <center> #{stud.pos}</center>
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">
+                                Grade
+                            </f:facet>
+                            <center> #{stud.grade}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Remark
+                            </f:facet>
+                            #{stud.remark}
+                        </h:column>                        
+                    </h:dataTable>
+                </div>
+
+            </div> 
+        </h:form>    
+
+       <script>
+            $(document).on("ready", function () {
+                $('select').material_select();
+            });
+        </script>
+    </h:body>
+</html>
+

@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>ANNUAL HISTORY</title>
+        <link rel="shortcut icon" href="images/Jac Logo.JPG" type="image/x-icon"/>
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+        <style type="text/css">
+            h3{
+                color:#3a414a; 
+
+            }
+            tr.oddrows {
+
+                color: black;
+                font-size:12px;
+            }
+
+
+            tr.evenrows {
+                color: black;
+                font-size:12px;
+            }
+            table{
+                width: 100%
+            }
+            table.people th{
+                background-color: white;
+                color: black;
+                height: 10px;
+                font-size: 14px
+            }
+
+        </style>
+        <script language="javascript" type="text/javascript">
+            function printDiv(divID) {
+                //Get the HTML of div
+                var divElements = document.getElementById(divID).innerHTML;
+                //Get the HTML of whole page
+                var oldPage = document.body.innerHTML;
+
+                //Reset the page's HTML with div's HTML only
+                document.body.innerHTML =
+                        "<html><head><title></title></head><body>" +
+                        divElements + "</body></html>";
+
+                //Print Page
+                window.print();
+
+                //Restore orignal HTML
+                document.body.innerHTML = oldPage;
+
+
+            }
+        </script>
+    </h:head>
+    <h:form>
+            <div class="row">
+                <div class="col-2" style=" margin-top: 3%; margin-left: 2%">
+                    <h:selectOneMenu value="#{computeresultController.examsession}" onchange="submit()" class="form-control">
+                        <f:selectItem itemValue="" itemLabel="Select Session"/>
+                        <f:selectItem itemValue="2016/2017" itemLabel="2016/2017"/>
+                        <f:selectItem itemValue="2017/2018" itemLabel="2017/2018"/>
+                        <f:selectItem itemValue="2018/2019" itemLabel="2018/2019"/>
+                        <f:selectItem itemValue="2019/2020" itemLabel="2019/2020"/>
+                        <f:selectItem itemValue="2020/2021" itemLabel="2020/2021"/>
+                    </h:selectOneMenu>                    
+                
+                    <h:selectOneMenu value="#{computeresultController.level}" onchange="submit()" class="form-control">
+                        <f:selectItem itemValue="" itemLabel="Select Level"/>
+                        <f:selectItem itemValue="10" itemLabel="Pre-Nursery"/>
+                        <f:selectItem itemValue="101" itemLabel="Nursery One"/>
+                        <f:selectItem itemValue="102" itemLabel="Nursery Two"/>
+                        <f:selectItem itemValue="103" itemLabel="Nursery Three"/>
+                        <f:selectItem itemValue="100" itemLabel="Primary One"/>
+                        <f:selectItem itemValue="200" itemLabel="Primary Two"/>
+                        <f:selectItem itemValue="300" itemLabel="Primary Three"/>
+                        <f:selectItem itemValue="400" itemLabel="Primary Four"/>
+                        <f:selectItem itemValue="500" itemLabel="Primary Five"/>
+                        <f:selectItem itemValue="600" itemLabel="Primary Six"/>
+                        <f:selectItem itemValue="1" itemLabel="JSS 1"/>
+                        <f:selectItem itemValue="2" itemLabel="JSS 2"/>
+                        <f:selectItem itemValue="3" itemLabel="JSS 3"/>
+                        <f:selectItem itemValue="4" itemLabel="SSS 1"/>
+                        <f:selectItem itemValue="5" itemLabel="SSS 2"/>
+                    </h:selectOneMenu>             
+                    <h:selectOneMenu value="#{computeresultController.classcode}" onchange="submit()" class="form-control">
+                        <f:selectItem itemValue="" itemLabel="Select Class"/>
+                        <f:selectItems value="#{computeresultController.classByLevel}" var="class" itemValue="#{class.classcode}" itemLabel="#{class.classcode}"/>
+                    </h:selectOneMenu>                                    
+                </div>
+                <div class="col-2" style=" margin-top: 3%; margin-left: 2%">
+                    
+                </div>
+                <div class="col-2" style=" margin-top: 3%; margin-left: 2%">
+                    
+                </div>
+                <div class="col-2" style=" margin-top: 3%; margin-left: 2%">
+                    
+                </div>
+        </div>
+        <br></br>
+        
+            <div class="row">
+                <div class="col-1" style=" margin-left: 4%">
+                    <h:commandButton value="Print" onclick="javascript:printDiv('printdiv')" style=" cursor: pointer;" class="btn-success"/>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row " >
+
+                <div class="col-11" style=" border: 1px #000 solid; margin-left:2%" id="printdiv" >
+                    <table>
+                        <tr>
+                            <td> <img src="images/logosch1.png" class="profile"  width="120px" height="120px" /> </td>   
+                            <td> <b style=" font-size: 20px"> TESEM MODEL SCHOOLS MAKURDI</b><br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>ANNUAL RESULT SUMMARY</b>
+                                <hr/><br/>
+
+                            </td>  
+                            <td> </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Class:<b> <h:outputText value=" #{computeresultController.classcode}"/></b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Session:<b><h:outputText value="#{computeresultController.examsession}"/></b></td>
+                        </tr>                       
+                    </table>
+                    <h:dataTable binding="#{tatble}" value="#{computeresultController.allAnnualBank}" var="stud" rowClasses="oddrows,evenrows" rules="all" width="100%" styleClass="people" border="1" >
+                        <h:column>
+                            <f:facet name="header">
+                                S/N
+                            </f:facet>
+                            <center>     <h:outputText value="#{tatble.rowIndex+1}"/> </center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                NAME OF PUPILS
+                            </f:facet>
+                            <h:outputText value="#{stud.name}"/> 
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                TOTAL
+                            </f:facet>
+                            <center>        #{stud.finaltotal}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                AVERAGE
+                            </f:facet>
+                            <center>    #{stud.finalaverage}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                POSITION
+                            </f:facet>
+                            <center>   #{stud.classposition}</center>
+                        </h:column>  
+                        <h:column>
+                            <f:facet name="header">
+                                REMARK
+                            </f:facet>
+                            <center>   #{stud.remark}</center>
+                        </h:column>                          
+                         <h:column>
+                          <f:facet name="header">
+                                   ACTION
+                                </f:facet>
+                             <h:commandLink action="#{computeresultController.deleteAnnualbank(stud.code)}"  value="Delete"  style=" color: red"/>
+                            </h:column>
+                    </h:dataTable>
+                </div>
+
+            </div> 
+        </h:form>
+
+        <script>
+            $(document).on("ready", function () {
+                $('select').material_select();
+            });
+        </script>
+</html>
+

@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Dashboard</title>
+        <meta name="generator" content="Mobirise v3.12.1, mobirise.com"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="shortcut icon" href="../images/btlogo.png" type="image/x-icon"/>
+        <meta name="description" content="Site Builder Description"/>
+        <script src="js/cdnjs.cloudflare.com_ajax_libs_ScrollMagic_2.0.5_ScrollMagic.min.js" type="text/javascript"></script>
+        <script src="js/cdnjs.cloudflare.com_ajax_libs_ScrollMagic_2.0.5_plugins_debug.addIndicators.min.js" type="text/javascript"></script>
+        <script src="js/cdnjs.cloudflare.com_ajax_libs_materialize_0.98.2_js_materialize.min.js" type="text/javascript"></script>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"/>
+        <link rel="stylesheet" href="../assets/bootstrap-material-design-font/css/material.css"/>
+        <link rel="stylesheet" href="../assets/tether/tether.min.css"/>
+
+        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../assets/dropdown/css/style.css"/>
+        <link rel="stylesheet" href="../assets/animate.css/animate.min.css"/>
+        <link rel="stylesheet" href="../assets/socicon/css/styles.css"/>
+        <link rel="stylesheet" href="../assets/theme/css/style.css"/>
+        <link rel="stylesheet" href="css/materialize.min.css"/>
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <link rel="stylesheet" href="css/fonts.googleapis.com/css?family=Montserrat"/>
+
+        <style>
+            a{
+                color: darkcyan;
+            }
+        </style>
+        <style type="text/css">
+            body{
+                padding:0;
+                margin:0;
+            }
+            .menu ul{
+                list-style:none;
+                margin: 0;
+                padding: 0;
+            }
+            .menu ul li:hover{
+                background-color: darkcyan;
+            }
+            .menu ul li{
+                padding:15px; 
+                position: relative;
+                width: 100%;
+                vertical-align:middle;
+                background-color:  #0d253d;
+                border-right:5px solid darkcyan;
+                cursor: pointer;
+                border-top: 1px solid #BDC3C7;
+                -webkit-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+            }
+            .menu>ul>li>ul>li{
+                border-right:5px solid #FFF;
+            }
+            .menu ul ul{
+                transition: all 0.3s;
+                opacity: 0;
+                position: absolute;
+                border-left:5px solid darkcyan; 
+                visibility: hidden;
+                left: 100%;
+                top:-2%;
+            }
+            .menu ul li:hover ul{
+                opacity: 1;
+                visibility: visible;
+            }
+            .menu ul li a{
+                color:#FFF;
+                text-decoration:none; 
+            }
+            span{
+                margin-right:15px;
+            }
+            .menu>ul>li:nth-of-type(2)::after{
+                content: "";
+                position: absolute;
+                margin-left:35%;
+                color: #FFF;
+                font-size: 15px;
+            }
+            .menu>ul>li:nth-of-type(3)::after{
+                content: "";
+                position: absolute;
+                margin-left:35%;
+                color: #FFF;
+                font-size: 15px;
+            }
+            .menu>ul>li:nth-of-type(4)::after{
+                content: "";
+                position: absolute;
+                margin-left:35%;
+                color: #FFF;
+                font-size: 15px;
+            }
+            .menu>ul>li:nth-of-type(5)::after{
+                content: "";
+                position: absolute;
+                margin-left:35%;
+                color: #FFF;
+                font-size: 15px;
+            }
+            .hor{
+                position: absolute;
+                background-color:#2ECC71;
+                width:100%;
+                height: 50px;
+            }
+        </style>
+
+        <!--Custom Font-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"/>
+     <style type="text/css">
+            .profile{
+                border-top-left-radius: 50% 50%;
+                border-top-right-radius: 50% 50%;
+                border-bottom-right-radius: 50% 50%;
+                border-bottom-left-radius: 50% 50%;
+            }
+            h3{
+                color:#3a414a; 
+
+            }
+            tr.oddrows {
+ background-color: #004d40;
+                color: white;
+                font-size:12px;
+            }
+
+
+            tr.evenrows {
+
+                
+                color: black;
+                font-size:12px;
+            }
+            table{
+                width: 100%
+            }
+            table.people th{
+background:#c7ffba;
+                color: black;
+                height: 13px;
+                font-size: 11px
+            }
+
+        </style>
+    </h:head>
+    <h:body style="background: #333333;">
+        <h:form enctype="multipart/form-data">
+
+            <div class="row" style=" background-color: #0d253d">
+                <div class="col s4 m2" >
+                    <img src="images/kenwill.JPG" alt="School Logo" style="width:50%;height:10%" class="profile" width="150px" height="150px">
+
+                    </img>
+                </div>
+                
+                <div class="col s12 m8">
+                        <center>      <h4 style=" color: white"><b>KENWILL REMEDIAL SCHOOL [KENRES]</b></h4><h5><span style="COLOR:YELLOW"><b>Data Computation Dashboard</b></span></h5></center>
+                </div>
+                <div class="col s4 m2" >
+                    <img src="images/kenwill.JPG" alt="School Logo" style="width:50%;height:10%" class="profile" width="150px" height="150px">
+
+                    </img>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col s12 m2">
+                    <div class="menu" >
+                        <ul>                           
+                            <li><a  href="allstudents.jsf" target="main"><span class="fa fa-desktop"></span>ALL STUDENTS</a></li>
+                             
+                            <li><a ><span class="fa fa-desktop"></span>SUBJECT ></a>
+                                <ul>
+                                    <li><a href="createsubjects.jsf" target="main"><span class="fa fa-add"></span>ADD </a></li>
+                                    <li><a href="allSubject.jsf" target="main"><span class="fa fa-edit"></span>ALL SUBJECTS </a></li>                                   
+                                    </ul>
+                            </li>   
+                            <li><a><span class="fa fa-desktop"></span>SET CLASS ></a>
+                                <ul>                                   
+                                   <li><a href="prepareClass.jsf" target="main"><span class="fa fa-add"></span>SUBJECTS </a></li>                                    
+                                   <li><a href="prepareAttendance.jsf" target="main"><span class="fa fa-add"></span>ATTENDANCE </a></li> 
+                                   <li><a href="asignClassPsycho.jsf" target="main"><span class="fa fa-add"></span>PSYCHOMOTOR </a></li>    
+                                   </ul>
+                                   </li>
+                            
+                                   <li><a><span class="fa fa-desktop"></span>SET A STUDENT > </a>
+                                   <ul>                  
+                                   <li><a href="preparesubjectReg.jsf" target="main"><span class="fa fa-edit"></span>SUBJECTS </a></li> 
+                                    <li><a href="byregAttendance.jsf" target="main"><span class="fa fa-edit"></span>ATTENDANCE </a></li>
+                                    <li><a href="asignStudentPhycho.jsf" target="main"><span class="fa fa-edit"></span>PSYCHOMOTOR </a></li>
+                                    </ul>
+                                    </li>
+                            <li><a><span class="fa fa-database"></span>COMPUTE ></a>
+                                <ul>
+                                    <li><a href="attendance.jsf" target="main"><span class="fa fa-database"></span> ATTENDANCE </a></li>
+                                    <li><a href="Psychomotor.jsf" target="main"><span class="fa fa-database"></span> PSYCHOMOTOR </a></li>
+                                    <li><a href="Adejacompute.jsf" target="main"><span class="fa fa-add"></span>SUBJECT</a></li>                                                                       
+                                    <li><a href="classreport.jsf" target="main"><span class="fa fa-remove"></span>CLASS RESULT</a></li> 
+                                    <li><a href="computeannualscores.jsf" target="main"><span class="fa fa-remove"></span>SET ANNUAL</a></li>
+                                    <li><a href="computeannual.jsf" target="main"><span class="fa fa-remove"></span>CLASS ANNUAL</a></li>
+                                </ul>
+                            </li>
+                           <li><a><span class="fa fa-users"></span> STAFF > </a>
+                                <ul>
+                                    <li><a href="creatHeadteacher.jsf" target="main"><span class="fa fa-add"></span>REPLACE HEADTEACHER </a></li>
+                                    <li><a href="allocateFormaster.jsf" target="main"><span class="fa fa-edit"></span>ALLOCATE FORMMASTER </a></li>                                
+                                   </ul>
+                            </li>
+                          <li><a><span class="fa fa-database"></span>PRINT LISTS ></a>
+                                <ul>
+                                    <li><a href="subjectHistory.jsf" target="main"><span class="fa fa-contact"></span> SUBJECT </a></li> 
+                                    <li><a href="checkResult.jsf"  target="main"><span class="fa fa-database"></span>CLASS</a></li> 
+                                    <li><a href="anualSubject.jsf" target="main"><span class="fa fa-contact"></span> ANNUALSUBJECT </a></li>
+                                    <li><a href="annualHistory.jsf"  target="main"><span class="fa fa-database"></span>ANNUALCLASS</a></li> 
+                                </ul>
+                            </li>
+                            <li><a><span class="fa fa-database"></span> SCORE-SHEET ></a>
+                                <ul>    
+                                    <li><a href="datasheet.jsf" target="main"><span class="fa fa-remove"></span>ASSESMENT</a></li>
+                                    <li><a href="AttendanceHistory.jsf"  target="main"><span class="fa fa-database"></span>ATTENDANCE</a></li> 
+                                    <li><a href="printpsychomotor.jsf"  target="main"><span class="fa fa-database"></span>PSYCHOMOTOR</a></li>                                     
+                                </ul>
+                            </li>                        
+                        <li><a href="resultUsers.jsf" target="main"><span class="fa fa-remove"></span>USERS</a></li>
+                        <li> <h:commandLink value="Log Off" action="#{resultusersController.logOut()}" style="color:orangered"/></li>
+                     </ul>
+                    </div>
+                </div>
+              <div class="col s12 m10">
+                    <iframe name="main" src="" width="100%" height="540px" frameborder="0" style="background: #333333;"/>
+
+
+                </div>
+            </div>
+
+        </h:form>
+
+    </h:body>
+</html>
+

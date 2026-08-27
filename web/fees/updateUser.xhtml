@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Update Users</title>
+            <link rel="stylesheet" href="css/materialize.min.css"/>
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+        <script src="js/materialize.min.js"></script>
+        <style>
+            .id{
+                color: blue;
+            }
+
+        </style>
+    </h:head>
+    
+   <h:body >
+        
+        <h:form enctype="multipart/form-data">
+            <div class="row " >
+                <div class="col s12 m4"></div>
+                <div class="col s12 m4" style=" margin-top:2%; border: 2px darkcyan solid;background:white">
+                    <h5 style=" margin-left: 30%; color: blue">Edit Users</h5>
+                    
+                    
+                    
+                   <div class=" col s12 m6">
+                       <h:inputText value="#{userController.username}" disabled="true">
+                            <f:passThroughAttribute name="placeholder" value=" Username..."/>
+                        </h:inputText>
+
+                    </div>
+                    
+                    <div class=" col s12 m6">
+                        <h:inputText value="#{userController.password}">
+                            <f:passThroughAttribute name="placeholder" value=" Password..."/>
+                        </h:inputText>
+
+                    </div>
+                  
+                  <div class=" col s12 m6">
+                        <h:inputText value="#{userController.role}">
+                            <f:passThroughAttribute name="placeholder" value=" Role..."/>
+                        </h:inputText>
+
+                    </div>
+                    
+                      <div class=" col s6 m6">
+                          <h:commandButton class="waves-effect waves-light btn"  action="#{userController.UpdateUsers2()}" value="Update">
+                        </h:commandButton>
+                    </div>
+                      </div>
+            </div>        
+         </h:form>
+    </h:body>
+</html>
+

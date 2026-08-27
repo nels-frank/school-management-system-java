@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Student's Information</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/dropdown/css/style.css"/>
+  <link rel="stylesheet" href="assets/theme/css/style.css"/>
+   <link href="designs/css/animate.css" rel="stylesheet" />
+   <link href="designs/css/style.css" rel="stylesheet"/>  
+   <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+   <!-- template skin -->       
+   <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <script language="javascript" type="text/javascript">
+            function printDiv(divID) {
+                //Get the HTML of div
+                var divElements = document.getElementById(divID).innerHTML;
+                //Get the HTML of whole page
+                var oldPage = document.body.innerHTML;
+
+                //Reset the page's HTML with div's HTML only
+                document.body.innerHTML =
+                        "<html><head><title></title></head><body>" +
+                        divElements + "</body></html>";
+                //Print Page
+                window.print();
+
+                //Restore orignal HTML
+                document.body.innerHTML = oldPage;
+
+
+            }
+        </script>
+        <style type="text/css">
+            .profile{
+                border-top-left-radius: 50% 50%;
+                border-top-right-radius: 50% 50%;
+                border-bottom-right-radius: 50% 50%;
+                border-bottom-left-radius: 50% 50%;
+            }
+            h3{
+                color:#3a414a; 
+
+            }
+            tr.oddrows {
+
+                color: black;
+                font-size:17px;
+            }
+
+
+            tr.evenrows {
+
+                background-color:  #843534;
+                color: white;
+                font-size:17px;
+            }
+            table{
+                width: 100%
+            }
+            table.people th{
+
+                color: black;
+                height: 13px;
+                font-size: 13px
+            }
+
+        </style>
+        
+    </h:head>
+    <h:body>
+        <div id="page-top" data-spy="scroll" data-target=".navbar-custom">
+            <div id="wrapper">
+        <!-- Section: intro -->
+                <section id="intro" class="intro">
+                    <div class="intro-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-10">
+                                    <div class="form-wrapper">
+                                        <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+
+                                            <div class="panel panel-skin">
+                                                <div class="panel-heading" style="background: green" >
+                                                  
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                                                    <div id="errormessage"></div>
+        <h:form>
+            <div class="row">               
+                <div class="container-fluid" style=" background: #F1C050" id="printdiv">
+                   
+                  <table style=" background: whitesmoke" >
+                    <tr>
+                        <td>
+                    <div class="row">
+                        <table style=" background: #075b2f">
+                            <center>  <img src="images/kenwill.JPG" class="profile" width="150px" height="150px"/></center> 
+                            <tr>
+                                
+                                <td>        
+                            <center>  <h1><span style="color: white"><b> KENWILL REMEDIAL SCHOOL [KENRES]</b></span></h1></center>  
+                            <center> <h4><span style=" margin-top: 0%; color:  white" ><b> OPP. ASSEMBLIES OF GOD'S CHURCH,</b></span></h4></center>
+                            <center> <h4><span style=" margin-top: 0%; color:  white" ><b> MADA STATION ROAD, NASSARAWA EGGON. NASARAWA STATE.</b></span></h4></center>
+                                </td>
+                                
+                            </tr>
+                        </table>
+                        <center>
+                        <div class="col-sm-3">                                                      
+                        </div> 
+                        </center>
+                       </div>        
+                    <div class="row"  style=" background:#843534;margin-left: 200px;margin-right: 200px">
+                    
+                        <center><img src="../image.jpg" class="profile"  width="150px" height="150px"/></center> 
+                        <div class="col-sm-12">
+                            <center><h3 style=" color: white">Student's Bio Data</h3></center>
+                        </div>
+                    </div>
+                <br></br>               
+    </td> 
+   </tr>
+</table>             
+                 <div class=" col s12 m6">
+                 <h:commandButton  action="#{studentsinfoController.back()}"  value="Print" onclick="javascript:printDiv('printdiv')" style=" cursor: pointer; background-color: green" class="waves-effect waves-light btn" >
+                 </h:commandButton>
+                 </div>
+                 <div class="row"  style=" background: #843534;margin-left: 10px;margin-right: 10px">
+                 <table style=" background: whitesmoke">                
+                 <tr>
+                 <td style="color: #a9302a; font-size: 20px;">Reg Number:</td>   <td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.regno}"/> </td>
+                 <td style="color: #a9302a; font-size: 20px;">Date/Time:</td>   <td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.date}"/> </td>                    
+                </tr>
+                <tr>
+                    <td style="color: #a9302a; font-size: 20px;">Surname: </td> <td style=" font-size: 20px;"> <h:outputText value="#{studentsinfoController.fname}"/> </td> 
+                    <td style="color: #a9302a; font-size: 20px;">First Name:</td> <td style=" font-size: 20px;"> <h:outputText value="#{studentsinfoController.mname}"/></td>                 
+                </tr>
+                    <tr>
+                     <td style="color: #a9302a; font-size: 20px;">Middle Name:</td> <td style=" font-size: 20px;"> <h:outputText value="#{studentsinfoController.lname}"/></td> 
+                    <td style="color: #a9302a; font-size: 20px;">Nationality:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.nationality}"/></td> 
+                    </tr>
+                    <tr>
+                                 
+                     <td style="color: #a9302a; font-size: 20px;">State:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.state}"/></td>  
+                     <td style="color: #a9302a; font-size: 20px;">LGA:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.lga}"/></td>
+                </tr>
+                    
+                  <tr>
+                      <td style="color: #a9302a; font-size: 20px;">Religion:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.religion}"/></td>
+                    <td style="color: #a9302a; font-size: 20px;">Tribe:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.tribe}"/></td>
+                     
+                </tr>
+                    <tr>
+                    <td style="color: #a9302a; font-size: 20px;">Gender:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.sex}"/></td>
+                     <td style="color: #a9302a; font-size: 20px;">Date of Birth:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.dob}"/></td>
+                    </tr>
+                     <tr>
+                     
+                     <td style="color: #a9302a; font-size: 20px;">Genotype:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.healthstatus}"/></td>
+                     <td style="color: #a9302a; font-size: 20px;">Status:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.status}"/></td>
+                </tr>
+                    
+                <tr>
+                  <td style="color: #a9302a; font-size: 20px;">Guardian's Address:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.guardianaddress}"/></td>
+                 <td style="color: #a9302a; font-size: 20px;">Guardian's Name:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.guardianname}"/></td>
+                </tr>
+                   
+                    <tr>
+                        
+                    <td style="color: #a9302a; font-size: 20px;">Guardian's Occupation:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.guardianoccupation}"/></td>
+                        <td style="color: #a9302a; font-size: 20px;">Guardian's Tele:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.guardianno}"/></td>
+                </tr>
+                    
+                    <tr>
+                        <td style="color: #a9302a; font-size: 20px;">Admitted Year:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.session}"/></td>
+                        <td style="color: #a9302a; font-size: 20px;">Class:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.classcode}"/></td>                  
+                </tr> 
+            </table>
+                    </div>
+ 
+            <center> <b>Thanks for your Patronage</b><br/></center>
+            </div>      
+            </div>
+             <div class=" col s12 m6">
+                 <h:commandButton class="waves-effect waves-light btn"  action="#{studentsinfoController.back()}"  style=" background-color: green" value="Register New Student">
+                    </h:commandButton>
+                    </div>
+        </h:form>
+                                                    
+                                                   </div>				
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>		
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+         <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+           <!-- Core JavaScript Files -->
+            <script src="designs/js/jquery.min.js"></script>	 
+            <script src="designs/js/bootstrap.min.js"></script>
+            <script src="designs/js/jquery.easing.min.js"></script>
+            <script src="designs/js/wow.min.js"></script>
+            <script src="designs/js/jquery.scrollTo.js"></script>
+            <script src="designs/js/jquery.appear.js"></script>
+            <script src="designs/js/stellar.js"></script>
+            <script src="designs/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+            <script src="designs/js/owl.carousel.min.js"></script>
+            <script src="designs/js/nivo-lightbox.min.js"></script>
+            <script src="designs/js/custom.js"></script>
+            <script src="designs/contactform/contactform.js"></script>
+            
+   <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/SmoothScroll.js"></script>
+  <script src="assets/viewportChecker/jquery.viewportchecker.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script>
+  <script src="assets/jquery-mb-ytplayer/jquery.mb.YTPlayer.min.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <script src="assets/mobirise-slider-video/script.js"></script>
+            
+        <script>
+            $(document).on("ready", function () {
+                $('select').material_select();
+            });
+            $('.datepicker').pickadate({
+                selectMonths: true, // Creates a dropdown to control month
+                selectYears: 200 // Creates a dropdown of 15 years to control year
+            });
+        </script>
+        
+    </h:body>
+</html>
+

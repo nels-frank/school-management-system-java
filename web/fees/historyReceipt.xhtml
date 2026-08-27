@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>HISTORY RECEIPT</title>
+        <link rel="shortcut icon" href="images/Jac Logo.JPG" type="image/x-icon"/>
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <script language="javascript" type="text/javascript">
+            function printDiv(divID) {
+                //Get the HTML of div
+                var divElements = document.getElementById(divID).innerHTML;
+                //Get the HTML of whole page
+                var oldPage = document.body.innerHTML;
+
+                //Reset the page's HTML with div's HTML only
+                document.body.innerHTML =
+                        "<html><head><title></title></head><body>" +
+                        divElements + "</body></html>";
+                //Print Page
+                window.print();
+
+                //Restore orignal HTML
+                document.body.innerHTML = oldPage;
+
+
+            }
+        </script>
+        <style type="text/css">
+            .profile{
+                border-top-left-radius: 50% 50%;
+                border-top-right-radius: 50% 50%;
+                border-bottom-right-radius: 50% 50%;
+                border-bottom-left-radius: 50% 50%;
+            }
+            h3{
+                color:#3a414a; 
+
+            }
+            tr.oddrows {
+
+                color: black;
+                font-size:17px;
+            }
+
+
+            tr.evenrows {
+
+                background-color:  #843534;
+                color: white;
+                font-size:17px;
+            }
+            table{
+                width: 100%
+            }
+            table.people th{
+
+                color: black;
+                height: 13px;
+                font-size: 13px
+            }
+
+        </style>
+    </h:head>
+    <h:body>
+        <div id="page-top" data-spy="scroll" data-target=".navbar-custom">
+            <div id="wrapper">
+                <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="background:orangered" >
+                    <div class="container navigation" >
+                        <div class="navbar-header page-scroll">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <a class="navbar-brand" href="">
+                                <img src="img/tesem.png" alt="" width="60" height="50" />
+                            </a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                            
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container -->
+                </nav>
+                <!-- Section: intro -->
+                <section id="intro" class="intro">
+                    <div class="intro-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-10">
+                                    <div class="form-wrapper">
+                                        <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+                                            <div class="panel panel-skin">
+                                               
+                                                <div class="panel-body">
+                                                    
+          <h:form role="form" class="contactForm lead" style=" margin-top: 30px">
+            <div class="row">
+                
+                <div class="container-fluid" style=" background: #F1C050" id="printdiv">
+                 <table style=" background: whitesmoke" >
+                    <tr>
+                       <td>
+                        <div class="row" >
+                        <table style=" background: #075b2f">
+                            <tr>
+                                <td>
+                        <div class="col-sm-3"> 
+                           
+                        <img src="images/kenwill.JPG"   width="130px" height="130px"/> 
+                        </div>               
+                                </td>
+                                <td>
+                        <center>  <h2><span style="color: white"><b> KENWILL REMEDIAL SCHOOL </b></span></h2></center>                            
+                            <center> <h6><span style=" margin-top: 0%; color:  white" ><b> [KENRES]</b></span></h6></center>
+                            <center> <h5><span style=" margin-top: 0%; color:  white" ><b> OPP. ASSEMBLIES OF GOD'S CHURCH MADA STATION ROAD, NASSARAWA EGGON. NASARAWA STATE</b></span></h5></center>
+                                </td>
+                                <td> 
+                                  <div class="col-sm-3"> 
+                                  <img src="../image.jpg" class="profile"  width="130px" height="130px"/>
+                                  </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <center>
+                        <div class="col-sm-3"> 
+                                                      
+                        </div> 
+                        </center>
+                       </div>        
+                    <div class="row"  style=" background:#843534;margin-left: 50px;margin-right: 50px">
+                        <div class="col-sm-10">
+                            <center><h3 style=" color: white">Payment/Confirmation Slip</h3></center>
+                        </div>
+                    </div>
+                <br></br>               
+    </td> 
+   </tr>
+</table>  
+                    <div class="row"  style=" background:#843534;margin-left: 50px;margin-right: 50px">
+                        <table style=" background: whitesmoke"> 
+                    <tr>
+                        <td style="color: black; font-size: 20px;" > Reg. Number: <b><h:outputText value="#{feeshistoryController.regno}"/></b> </td>   
+                        <td style="color: black; font-size: 20px;">Name: <b><h:outputText value="#{feeshistoryController.name}"/> </b></td> 
+                </tr>
+                    <tr>
+                        <td style="color: black; font-size: 20px;"> Admitted Level: <b><h:outputText  value="#{feeshistoryController.level}"/></b></td>                                                    
+                        <td style="color: black; font-size: 20px;">Class: <b><h:outputText  value="#{feeshistoryController.classcode}"/></b></td>
+                </tr>
+                <tr>                 
+                    <td style="color: black; font-size: 20px;">Slip NO: <b><h:outputText value="#{feeshistoryController.pin}"/></b></td> 
+                    <td style="color: black; font-size: 20px;">Session: <b><h:outputText  value="#{feeshistoryController.session}"/></b></td> 
+                </tr>
+                <tr>
+                    <td style="color: black; font-size: 20px;">Term: <b><h:outputText value="#{feeshistoryController.term}"/></b></td>
+                    <td style="color: black; font-size: 20px;">Amount Paid: <b><h:outputText  value="#{feeshistoryController.amountpaid}"/></b></td>
+              
+                </tr>                    
+                 <tr>
+                     <td style="color: black; font-size: 20px;">Balance: <b><h:outputText  value="#{feeshistoryController.balance}"/></b></td>
+                     <td style="color: black; font-size: 20px;">Payment Type: <b><h:outputText  value="#{feeshistoryController.paymenttype}"/></b></td>
+               
+                 </tr>
+                  <tr>
+                      <td style="color: black; font-size: 20px;">Teller No: <b><h:outputText  value="#{feeshistoryController.telanumber}"/></b></td>
+                      <td style="color: black; font-size: 20px;">Bank: <b><h:outputText value="#{feeshistoryController.bank}"/></b></td>             
+                  </tr>
+               
+                 <tr>                    
+                     <td style="color: black; font-size: 20px;">Date: <b><h:outputText  value="#{feeshistoryController.date}"/></b></td>     
+                     <td style="color: black; font-size: 20px;">Time: <b><h:outputText value="#{feeshistoryController.datetime}"/></b></td> 
+                 </tr>                  
+            </table>
+            </div>
+            <center> <b>Thanks for your Patronage</b><br/></center>
+            </div>      
+            </div>
+           
+           <div class="col-2"  style=" margin-left: 10%"> 
+            <h:commandButton value="Print" onclick="javascript:printDiv('printdiv')" style=" cursor: pointer; background:  orangered; margin-left: 30%" class="btn btn-skin btn-block btn-lg"/>
+            <h:commandButton value="Delete" action="#{feeshistoryController.deleteFeeshistory()}" style=" cursor: pointer; background:  orangered; margin-left: 30%" class="btn btn-skin btn-block btn-lg"/>               
+           </div>
+           
+            </h:form>
+                                                     </div>				
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>		
+                            </div>
+                        </div>
+                    </div>
+                </section>
+          </div>
+        </div>
+        <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+           <!-- Core JavaScript Files -->
+            <script src="designs/js/jquery.min.js"></script>	 
+            <script src="designs/js/bootstrap.min.js"></script>
+            <script src="designs/js/jquery.easing.min.js"></script>
+            <script src="designs/js/wow.min.js"></script>
+            <script src="designs/js/jquery.scrollTo.js"></script>
+            <script src="designs/js/jquery.appear.js"></script>
+            <script src="designs/js/stellar.js"></script>
+            <script src="designs/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+            <script src="designs/js/owl.carousel.min.js"></script>
+            <script src="designs/js/nivo-lightbox.min.js"></script>
+            <script src="designs/js/custom.js"></script>
+            <script src="designs/contactform/contactform.js"></script>
+    </h:body>
+</html>
+

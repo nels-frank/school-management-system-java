@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Result Approval Page</title>
+         <link rel="stylesheet" href="css/materialize.min.css"/>
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <link rel="stylesheet" href="css/fonts.googleapis.com/css?family=Montserrat"/>
+        <style>
+          
+            tr.oddrows {
+                background-color: #333333;
+                color: yellowgreen;
+            }
+
+
+            tr.evenrows {
+                background-color: #0d253d;
+                color: white;
+            }
+            table{
+                width: 100%
+            }
+            table.people th{
+                background-color: #0d253d;
+                color: white;
+            }
+            a{
+                color:white;
+            }
+        </style>
+    </h:head>
+    <h:body style="color:  yellowgreen">
+        <h:form>
+          <div class="row">
+                        <div class="col s12 m4">
+                            <h:selectOneMenu value="#{computeresultController.level}" onchange="submit()" class="waves-orange">
+                            <f:selectItem itemValue="" itemLabel="Select Level"/>
+                            <f:selectItem itemValue="10" itemLabel="Pre-Nursery"/>
+                            <f:selectItem itemValue="101" itemLabel="Nursery One"/>
+                            <f:selectItem itemValue="102" itemLabel="Nursery Two"/>
+                            <f:selectItem itemValue="103" itemLabel="Nursery Three"/>
+                            <f:selectItem itemValue="100" itemLabel="Primary One"/>
+                            <f:selectItem itemValue="200" itemLabel="Primary Two"/>
+                            <f:selectItem itemValue="300" itemLabel="Primary Three"/>
+                            <f:selectItem itemValue="400" itemLabel="Primary Four"/>
+                            <f:selectItem itemValue="500" itemLabel="Primary Five"/>
+                            <f:selectItem itemValue="600" itemLabel="Primary Six"/>
+                            <f:selectItem itemValue="1" itemLabel="JSS 1"/>
+                            <f:selectItem itemValue="2" itemLabel="JSS 2"/>
+                            <f:selectItem itemValue="3" itemLabel="JSS 3"/>
+                            <f:selectItem itemValue="4" itemLabel="SSS 1"/>
+                            <f:selectItem itemValue="5" itemLabel="SSS 2"/>
+                            <f:selectItem itemValue="7" itemLabel="Pure Science"/>
+                        <f:selectItem itemValue="8" itemLabel="Social Science"/>
+                        <f:selectItem itemValue="9" itemLabel="Arts"/>
+                        <f:selectItem itemValue="11" itemLabel="Extra class"/>
+                        </h:selectOneMenu> <h:selectOneMenu value="#{schoolresultController.classcode}" onchange="submit()"  class="form-control">
+                            <f:selectItem itemValue="" itemLabel="Select Class"/>
+                            <f:selectItems value="#{computeresultController.classByLevel}" var="class" itemValue="#{class.classcode}" itemLabel="#{class.classcode}"/>
+                        </h:selectOneMenu></div>     <div class="col s12 m3">
+                            <h:commandButton  class="waves-orange btn" action="#{schoolresultController.approveResult()}" value="approve Scores" style="cursor: pointer; background: #0d253d"/>
+                        </div>
+          </div>
+            <h:dataTable value="#{schoolresultController.classresults}" var="stud" rowClasses="oddrows,evenrows" rules="all" width="100%" styleClass="people">
+                <h:column>
+                    <f:facet name="header">
+                        Name
+                    </f:facet>
+                    #{stud.name}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        Term
+                    </f:facet>
+                    #{stud.term}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        Session
+                    </f:facet>
+                    #{stud.acasession}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        Total
+                    </f:facet>
+                    <center>   #{stud.total}</center>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        Average
+                    </f:facet>
+                    <center>     #{stud.average} </center>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        class post
+                    </f:facet>
+                    <center>      #{stud.classposition} </center>
+                </h:column>
+
+            </h:dataTable>
+        </h:form>
+      <script>
+            $(document).on("ready", function () {
+                $('select').material_select();
+            });
+            $('.datepicker').pickadate({
+                selectMonths: true, // Creates a dropdown to control month
+                selectYears: 200 // Creates a dropdown of 15 years to control year
+            });
+        </script>
+    </h:body>
+</html>
+

@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+  <title>Students Promotion</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/dropdown/css/style.css"/>
+  <link rel="stylesheet" href="assets/theme/css/style.css"/>
+   <link href="designs/css/animate.css" rel="stylesheet" />
+   <link href="designs/css/style.css" rel="stylesheet"/>  
+   <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+   <!-- template skin -->       
+   <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+   </h:head>
+    <h:body>
+       <div id="page-top" data-spy="scroll" data-target=".navbar-custom">
+            <div id="wrapper">
+   <section id="ext_menu-1">
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top" style=" background-color:black">
+        <div class="container">
+
+            <div class="mbr-table">
+                <div class="mbr-table-cell">
+
+                    <div class="navbar-brand">                     
+                        <a class="navbar-caption"> <center><h4 style="color:yellow"><b>KENWILL REMEDIAL SCHOOL [KENRES]</b></h4></center></a>
+                    </div>
+                </div>
+                <div class="mbr-table-cell">
+                 
+                  <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
+                      <li class="nav-item nav-btn"><a class="nav-link btn btn-white btn-white-outline" href="index.jsf"><h5><b>HOME</b></h5></a></li>&nbsp;&nbsp;
+                  <li class="nav-item dropdown">
+                      <a class="nav-link btn btn-white btn-white-outline" data-toggle="dropdown-submenu" aria-expanded="false"><h5><b> STUDENTS</b></h5></a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item"  href="createstudents.jsf"><h5><b>REGISTRATION</b></h5></a>
+                      <a class="dropdown-item"  href="viewClassstudent.jsf"><h5><b>CLASS STUDENTS</b></h5></a>                      
+                      <a class="dropdown-item"  href="Promotion.jsf"><h5><b>PROMOTION</b></h5></a>  
+                      <a class="dropdown-item"  href="demotion.jsf"><h5><b>DEMOTION</b></h5></a>
+                  </div>
+                  </li> <!--
+                      <li class="nav-item nav-btn"><a class="nav-link btn btn-white btn-white-outline" href="../fees/Login.jsf"><h5><b>FEES MANAGEMENT</b></h5></a></li>
+                      <li class="nav-item nav-btn"><a class="nav-link btn btn-white btn-white-outline" href="../Result/Login.jsf"><h5><b>RESULT COMPUTATION</b></h5></a></li>
+                    -->
+                        </ul>
+                    
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+</section>
+
+                <center>Registration Page</center>
+                <!-- Section: intro -->
+                <section id="intro" class="intro">
+                    <div class="intro-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-6">
+                                    <div class="form-wrapper">
+                                        <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+
+                                            <div class="panel panel-skin">
+                                                <div class="panel-heading" style="background: darkblue" >
+                                                    <h6 class="panel-title"> Student's Promotion Portal<small>(It's free!)</small></h6>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                                                    <div id="errormessage"></div>
+                                                              <h:form role="form" class="contactForm lead" enctype="multipart/form-data">
+                                                                  <center> <label style="color: red">NB:Promotion Must Start From Primary 6 down to Pre-Nursery</label><br></br></center>
+                                                              <div class="row" >
+
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                    <label>Class Level</label><br></br>
+                       <h:selectOneMenu  value="#{studentsinfoController.level}" onchange="submit()" class="form-control">
+                            <f:selectItem itemValue="" itemLabel="Select Class Level"/>
+                        <f:selectItem itemValue="10" itemLabel="Pre-Nursery"/>
+                        <f:selectItem itemValue="101" itemLabel="Nursery One"/>
+                        <f:selectItem itemValue="102" itemLabel="Nursery Two"/>
+                        <f:selectItem itemValue="103" itemLabel="Nursery Three"/>
+                        <f:selectItem itemValue="100" itemLabel="Primary One"/>
+                        <f:selectItem itemValue="200" itemLabel="Primary Two"/>
+                        <f:selectItem itemValue="300" itemLabel="Primary Three"/>
+                        <f:selectItem itemValue="400" itemLabel="Primary Four"/>
+                        <f:selectItem itemValue="500" itemLabel="Primary Five"/>
+                        <f:selectItem itemValue="600" itemLabel="Primary Six"/>
+                        <f:selectItem itemValue="1" itemLabel="Basic 7"/>
+                        <f:selectItem itemValue="2" itemLabel="Basic 8"/>
+                        <f:selectItem itemValue="3" itemLabel="Basic 9"/>
+                        <f:selectItem itemValue="4" itemLabel="SSS 1"/>
+                        <f:selectItem itemValue="5" itemLabel="SSS 2"/>
+                        <f:selectItem itemValue="6" itemLabel="SSS 3"/>
+                        <f:selectItem itemValue="7" itemLabel="Pure Science"/>
+                        <f:selectItem itemValue="8" itemLabel="Social Science"/>
+                        <f:selectItem itemValue="9" itemLabel="Arts"/>
+                        <f:selectItem itemValue="11" itemLabel="Extra class"/>
+                        </h:selectOneMenu>
+                    <div class="validation"></div>
+                    </div>
+                    </div>
+                                           
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                    <label>Class Option</label><br></br>
+                         <h:selectOneMenu  value="#{studentsinfoController.classcode}" class="form-control">
+                            <f:selectItem itemValue="" itemLabel="Select Class Option"/>
+                            <f:selectItems value="#{studentsinfoController.classcodeBylevel}" var="classlevel" itemValue="#{classlevel.classcode}" itemLabel="#{classlevel.classcode}"/>                          
+                        </h:selectOneMenu>
+                    <div class="validation"></div>
+                    </div>
+                    </div>                    
+                   </div>                                                         
+                    <div class="row"  style=" background: darkblue; margin-left: 100px;margin-right: 180px">
+                        <h:commandLink action="#{studentsinfoController.promotion()}" value="Submit" class="btn btn-skin btn-block btn-lg">
+                    </h:commandLink>
+                         </div>                                                                 
+                                            <h5><h:outputText value="#{studentsinfoController.jdk}" style="color: orangered"/></h5>
+                                             
+                                                    </h:form>
+                                                </div>
+                                            </div>				
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>		
+                        </div>
+                    </div>		
+                </section>
+          </div>      
+       <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+           <!-- Core JavaScript Files -->
+            <script src="designs/js/jquery.min.js"></script>	 
+            <script src="designs/js/bootstrap.min.js"></script>
+            <script src="designs/js/jquery.easing.min.js"></script>
+            <script src="designs/js/wow.min.js"></script>
+            <script src="designs/js/jquery.scrollTo.js"></script>
+            <script src="designs/js/jquery.appear.js"></script>
+            <script src="designs/js/stellar.js"></script>
+            <script src="designs/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+            <script src="designs/js/owl.carousel.min.js"></script>
+            <script src="designs/js/nivo-lightbox.min.js"></script>
+            <script src="designs/js/custom.js"></script>
+            <script src="designs/contactform/contactform.js"></script>
+  
+   <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/SmoothScroll.js"></script>
+  <script src="assets/viewportChecker/jquery.viewportchecker.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script>
+  <script src="assets/jquery-mb-ytplayer/jquery.mb.YTPlayer.min.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <script src="assets/mobirise-slider-video/script.js"></script>
+            </div>
+        <script>
+            $(document).on("ready", function () {
+                $('select').material_select();
+            });
+            $('.datepicker').pickadate({
+                selectMonths: true, // Creates a dropdown to control month
+                selectYears: 200 // Creates a dropdown of 15 years to control year
+            });
+        </script>
+    </h:body>
+</html>
+

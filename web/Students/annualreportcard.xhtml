@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>ANNUAL REPORT CARD</title>
+        <link rel="shortcut icon" href="../images/btlogo.jpg" type="image/x-icon"/>
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <script language="javascript" type="text/javascript">
+            function printDiv(divID) {
+                //Get the HTML of div
+                var divElements = document.getElementById(divID).innerHTML;
+                //Get the HTML of whole page
+                var oldPage = document.body.innerHTML;
+
+                //Reset the page's HTML with div's HTML only
+                document.body.innerHTML =
+                        "<html><head><title></title></head><body>" +
+                        divElements + "</body></html>";
+                //Print Page
+                window.print();
+
+                //Restore orignal HTML
+                document.body.innerHTML = oldPage;
+
+
+            }
+        </script>
+        <style type="text/css">
+            .profile{
+                border-top-left-radius: 50% 50%;
+                border-top-right-radius: 50% 50%;
+                border-bottom-right-radius: 50% 50%;
+                border-bottom-left-radius: 50% 50%;
+            }
+            h3{
+                color:#3a414a; 
+
+            }
+       tr.oddrows {
+ background-color: #004d40;
+                color: white;
+                font-size:12px;
+            }
+
+
+            tr.evenrows {
+
+                
+                color: black;
+                font-size:12px;
+            }
+            table{
+                width: 100%
+            }
+            table.people th{
+background:#c7ffba;
+                color: black;
+                height: 13px;
+                font-size: 11px
+            }
+            #hcolumn{
+                background-color: #3e2723;
+                color:#ffffff;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div id="printdiv">
+            <center>
+                <table  style=" background-color: white">
+                    <tr >
+                        
+                        <td>    <img src="images/kenwill.JPG" style="margin-left: 15px;" class="profile"  width="130px" height="130px"/></td>   
+                        <td><center> <b><span style="font-size: 35px"><span style="color: green">KENWILL </span><span style="color: black">REMEDIAL</span><span style="color: red"> SCHOOL</span></span><br/>
+                                    <span style="font-size: 25px"> [KENRES]</span></b><br>OPP. ASSEMBLIES OF GOD'S CHURCH MADA STATION ROAD, NASSARAWA EGGON. NASARAWA STATE</br></center></td>&nbsp; &nbsp;&nbsp; &nbsp; 
+                        <td colspan="4"><img src="../image.jpg"  class="profile"  width="130px" height="130px" /> </td>
+                                                
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <table border="1" Style="margin-left: 15px;width: 98%">
+                                <tr>
+                                    <td colspan="4" style="background: orangered"> <center><h6 style=" color:white"> ACADEMIC RECORD</h6></center></td>
+                                </tr>
+                                <tr style="background:white">
+                                    <td><h7>  Name: <b> <h:outputText value=" #{computeresultController.name}"/></b></h7></td>
+                                    <td><h7>  Class: <b> <h:outputText value=" #{computeresultController.classcode}"/></b></h7>
+                                    </td>  
+                                    <td colspan="2"> <h7>  Sex <b> <h:outputText value=" #{computeresultController.sex}"/></b></h7></td>
+
+                                </tr>
+                                <tr style="background: white">
+                                    <td>  <h7>Session:  <b> <h:outputText value=" #{computeresultController.acasession}"/></b></h7>
+                                    </td>
+                                    <td colspan="2">   <h7>Class Enrollment: <b> <h:outputText value="#{computeresultController.classEnrollment} "/></b></h7> </td>
+                                   </tr>
+                                  
+                                <tr>
+                                    <td colspan="4" style="background: orangered"> <center><h5><b style=" color: darkblue"> ANNUAL ASSESSMENT DOSSIER </b></h5></center>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <h:dataTable value="#{computeresultController.findAnualByRegno}" var="stud" columnClasses="focus" class="table table-responsive" rules="all"  styleClass="people" style="border:1px #004d40 solid; width: 98%; height:100% ; margin-left: 15px;" >
+
+                                
+                                <h:column >
+                                    <f:facet name="header">
+                                        (A) SUBJECTS<span style="color:#c7ffba">*****************</span>
+                                    </f:facet>                  
+                                    <b style="color:darkblue"> #{stud.subject}</b>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                       1ST<span style="color:#c7ffba">*</span>TERM<br/><center>100%</center>
+                                    </f:facet>
+                                    <center>        #{stud.firsttermscore}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        2ND<span style="color:#c7ffba">*</span>TERM<br/><center>100%</center>
+                                    </f:facet>
+                                    <center>    #{stud.secondtermscore}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        3RD<span style="color:#c7ffba">*</span>TERM<br/><center>100%</center>
+                                    </f:facet>
+                                    <center>   #{stud.thirdtemscore}</center>
+                                </h:column>
+                                                   
+                                <h:column>
+                                    <f:facet name="header">
+                                        Total (300%)
+                                    </f:facet>
+                                    <center style="background-color: greenyellow;color:blue"> #{stud.total}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                   Class Avg
+                                    </f:facet>
+                                    <center style="background-color: #00695c;color:white"> #{stud.classavg}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Highest
+                                    </f:facet>
+                                    <center> #{stud.highestavg}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Lowest
+                                    </f:facet>
+                                    <center> #{stud.lowestavg}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Position
+                                    </f:facet>
+                                    <center> #{stud.pos}</center>
+                                </h:column>
+
+                                <h:column>
+                                    <f:facet name="header">
+                                        Grade
+                                    </f:facet>
+                                    <center  style="background-color: red;color:white"> #{stud.grade}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Remark<span style="color:#c7ffba">******</span>
+                                    </f:facet>
+                                    #{stud.remark}
+                                </h:column>
+
+                            </h:dataTable>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <table border="1" style=" width: 98%; margin-left: 15px ">
+                                <tr>                                    
+                                    <td>  Total  Score:<b> <h:outputText value=" #{computeresultController.finaltotal}"/></b></td>
+                                    <td>  Average:<b> <h:outputText value=" #{computeresultController.finalaverage}"/></b></td>
+                                    <td colspan="2">  Position:<b> <h:outputText value=" #{computeresultController.classposition}"/></b></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>   Class Teacher's Remark: <b> <h:outputText value=" #{computeresultController.formRemark}"/>
+                                        </b> 
+                                    </td>
+                                    <td colspan="2">
+                                        Name: <b> <h:outputText value=" #{computeresultController.levelposition}"/>
+                                        </b>
+                                    </td>
+                                    <td colspan="2">                                
+                                    Signature: <img src="../formsign.jpg" width="75px" height="15px"/> 
+                                </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Head Teacher's Remark: <b> <h:outputText value=" #{computeresultController.prinRemark}"/>
+                                        </b>
+                                    </td>
+                                    <td colspan="2">
+                                        Name:<b> 
+                                            <h:outputText value=" #{computeresultController.term}"/>
+                                                 </b>
+                                    </td>
+                                    <td colspan="2">
+                                        Signature: <img src="../formsign.jpg" width="75px" height="15px"/>
+                                    </td>
+                                  
+                                </tr>
+                                
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="4">
+                            <table border="1" style=" width: 30%; margin-left: 15px ">
+                                        
+                            </table>
+                        </td>
+                    </tr>               
+                </table>
+            </center>
+        </div>
+        <div class="row">
+            <div class="col-1"  style=" margin-left: 4%">
+                <h:form>        <h:commandButton value="Print" onclick="javascript:printDiv('printdiv')" style=" cursor: pointer;" class="btn-success"/>
+
+                </h:form>
+            </div>
+        </div>
+    </h:body>
+</html>
+

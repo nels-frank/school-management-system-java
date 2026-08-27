@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Sign Up</title>
+   <link rel="stylesheet" type="text/css" href="plugins/cubeportfolio/css/cubeportfolio.min.css"/>
+        <link href="designs/css/nivo-lightbox.css" rel="stylesheet" />
+        <link href="designs/css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+        <link href="designs/css/owl.carousel.css" rel="stylesheet" media="screen" />
+        <link href="designs/css/owl.theme.css" rel="stylesheet" media="screen" />
+        <link href="designs/css/animate.css" rel="stylesheet" />
+        <link href="designs/css/style.css" rel="stylesheet"/>
+  <!-- Site made with Mobirise Website Builder v3.0, https://mobirise.com -->
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="generator" content="Mobirise v3.0, mobirise.com"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="shortcut icon" href="assets/images/images7-128x128-26.jpg" type="image/x-icon"/>
+  <meta name="description" content=""/> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900"/>
+  <link rel="stylesheet" href="assets/bootstrap-material-design-font/css/material.css"/>
+  <link rel="stylesheet" href="assets/et-line-font-plugin/style.css"/>
+  <link rel="stylesheet" href="assets/tether/tether.min.css"/>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/socicon/css/socicon.min.css"/>
+  <link rel="stylesheet" href="assets/animate.css/animate.min.css"/>
+  <link rel="stylesheet" href="assets/dropdown/css/style.css"/>
+  <link rel="stylesheet" href="assets/theme/css/style.css"/>
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css"/>
+  <link href="designs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />     
+        <!-- boxed bg -->
+        <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+        <!-- template skin -->
+        <link id="t-colors" href="color/default.css" rel="stylesheet"/>
+    </h:head>
+    <h:body>
+     <div id="page-top" data-spy="scroll" data-target=".navbar-custom">
+            <section id="ext_menu-1">
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top" style=" background-color:darkblue">
+        <div class="container">
+            <div class="mbr-table">
+                
+                <div class="mbr-table-cell">
+            
+                    <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        ☰
+                    </button>
+
+                   <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
+                       <li class="nav-item"><a class="nav-link link" href="users/index.php" target="main">HOME</a></li>
+                       <li class="nav-item"><a class="nav-link link" href="users/aboutus.php" target="main">ABOUT US</a></li>
+                       <li class="nav-item"><a class="nav-link link" href="users/contact.php" target="main">CONTACT</a></li>         
+                       <li class="nav-item"><a class="nav-link link" href="users/blog.php" target="main">BLOG</a></li>                  
+                   </ul>                  
+                   <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        ☰
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</section>              
+                <!-- Section: intro -->
+                <section id="intro" class="intro" style=" margin-top: ">
+                    <div class="intro-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-6">
+                                    <div class="form-wrapper">
+                                        <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+                                            <div class="panel panel-skin">
+                                                <div class="panel-heading" style="background: orangered" >
+                                                    <h5 class="panel-title"><span class="fa fa-pencil-square-o"></span> Create an Account <small>(It's free!)</small></h5>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                                                    <div id="errormessage"></div>
+                                                 
+                                                                                
+                                                    <form class="form-horizontal" method="POST" action="applyaccout.php">
+  
+                  <div class="row">         
+                  <div class="col-xs-12 col-sm-12 col-md-12">          
+                  <div class="form-group">
+                      <label class="control-label" for="inputEmail">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email</label>
+                      &nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="inputEmail" placeholder="Your Email Address" name="username" value="#{sinupController.username}"/>
+                  <div class="validation"></div>  
+                  </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12">          
+                  <div class="form-group">
+                        <label class="control-label" for="inputSignupPassword">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password</label>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="inputSignupPassword" placeholder="Password" name="password" value="#{sinupController.password}"/>
+                        <div class="validation"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12">          
+                  <div class="form-group">
+                        <label class="control-label" for="inputSignupPassword2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Confirm Password</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="inputSignupPassword2" placeholder="Confirm Password" name="repassword" value="#{sinupController.passwordComfirmation}"/>
+                        <div class="validation"></div>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="controls">
+                        <div  style=" margin-left: 235px;margin-right: 165px">
+                            <h:commandLink   class="btn btn-skin btn-block btn-lg"  action="#{sinupController.createUsers()}" >Sign Up</h:commandLink>
+                    </div>
+                    </div>  
+                      Already have an account? <a class="nav-link link" href="applysignin.php" target="main">Sign In</a>
+                                                             
+                      </div>
+                  </div>
+                </form>
+</div>
+                                               </div>
+                                            </div>				
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>		
+                        </div>
+                    		
+                </section>                  
+                <footer>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="wow fadeInDown" data-wow-delay="0.1s">
+                                    <div class="widget">
+                                        <h5>About Medicio</h5>
+                                        <p>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="wow fadeInDown" data-wow-delay="0.1s">
+                                    <div class="widget">
+                                        <h5>Information</h5>
+                                        <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">Block delivery</a></li>
+                                            <li><a href="#">Sales of Blocks on Credits</a></li>
+                                            <li><a href="#">Terms and conditions</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="wow fadeInDown" data-wow-delay="0.1s">
+                                    <div class="widget">
+                                        <h5>Medicio center</h5>
+                                        <p>
+                                            Nam leo lorem, tincidunt id risus ut, ornare tincidunt naqunc sit amet.
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <span class="fa-stack fa-lg">
+                                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                                    <i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
+                                                </span> Monday - Saturday, 8am to 10pm
+                                            </li>
+                                            <li>
+                                                <span class="fa-stack fa-lg">
+                                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                                    <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                                                </span> +62 0888 904 711
+                                            </li>
+                                            <li>
+                                                <span class="fa-stack fa-lg">
+                                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                                </span> hello@medicio.com
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="wow fadeInDown" data-wow-delay="0.1s">
+                                    <div class="widget">
+                                        <h5>Our location</h5>
+                                        <p>The Suithouse V303, Kuningan City, Jakarta Indonesia 12940</p>		
+
+                                    </div>
+                                </div>
+                                <div class="wow fadeInDown" data-wow-delay="0.1s">
+                                    <div class="widget">
+                                        <h5>Follow us</h5>
+                                        <ul class="company-social">
+                                            <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li class="social-google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                            <li class="social-vimeo"><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+                                            <li class="social-dribble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>	
+                    </div>
+                    <div class="sub-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                    <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                                        <div class="text-left">
+                                            <p>&copy;Copyright - Medicio Theme. All rights reserved.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                    <div class="wow fadeInRight" data-wow-delay="0.1s">
+                                        <div class="text-right">
+                                            <div class="credits">
+                                                <!-- 
+                                                    All the links in the footer should remain intact. 
+                                                    You can delete the links only if you purchased the pro version.
+                                                    Licensing information: https://bootstrapmade.com/license/
+                                                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medicio
+                                                -->
+                                                <a href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>	
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+            <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+           <!-- Core JavaScript Files -->
+            <script src="designs/js/jquery.min.js"></script>	 
+            <script src="designs/js/bootstrap.min.js"></script>
+            <script src="designs/js/jquery.easing.min.js"></script>
+            <script src="designs/js/wow.min.js"></script>
+            <script src="designs/js/jquery.scrollTo.js"></script>
+            <script src="designs/js/jquery.appear.js"></script>
+            <script src="designs/js/stellar.js"></script>
+            <script src="designs/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+            <script src="designs/js/owl.carousel.min.js"></script>
+            <script src="designs/js/nivo-lightbox.min.js"></script>
+            <script src="designs/js/custom.js"></script>
+            <script src="designs/contactform/contactform.js"></script>
+
+        
+        <script>
+            $(document).on("ready", function () {
+                $('select').material_select();
+            });
+            $('.datepicker').pickadate({
+                selectMonths: true, // Creates a dropdown to control month
+                selectYears: 200 // Creates a dropdown of 15 years to control year
+            });
+        </script>
+    </h:body>
+</html>
+

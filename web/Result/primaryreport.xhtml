@@ -1,0 +1,427 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Primary Result</title>
+        <link rel="shortcut icon" href="../images/btlogo.jpg" type="image/x-icon"/>
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <script language="javascript" type="text/javascript">
+            function printDiv(divID) {
+                //Get the HTML of div
+                var divElements = document.getElementById(divID).innerHTML;
+                //Get the HTML of whole page
+                var oldPage = document.body.innerHTML;
+
+                //Reset the page's HTML with div's HTML only
+                document.body.innerHTML =
+                        "<html><head><title></title></head><body>" +
+                        divElements + "</body></html>";
+                //Print Page
+                window.print();
+
+                //Restore orignal HTML
+                document.body.innerHTML = oldPage;
+
+
+            }
+        </script>
+        <style type="text/css">
+            .profile{
+                border-top-left-radius: 50% 50%;
+                border-top-right-radius: 50% 50%;
+                border-bottom-right-radius: 50% 50%;
+                border-bottom-left-radius: 50% 50%;
+            }
+            h3{
+                color:#3a414a; 
+
+            }
+       tr.oddrows {
+ background-color: #004d40;
+                color: white;
+                font-size:12px;
+            }
+
+
+            tr.evenrows {
+
+                
+                color: black;
+                font-size:12px;
+            }
+            table{
+                width: 100%
+            }
+            table.people th{
+background:#c7ffba;
+                color: black;
+                height: 13px;
+                font-size: 11px
+            }
+            #hcolumn{
+                background-color: #3e2723;
+                color:#ffffff;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div id="printdiv">
+            <center>
+                <table  style=" background-color: white">
+                    <tr>
+                        
+                        <td>    <img src="images/kenwill.JPG" style="margin-left: 15px;" class="profile"  width="130px" height="130px"/></td>   
+                        <td><center> <b><span style="font-size: 35px"><span style="color: green">KENWILL </span><span style="color: black">REMEDIAL</span><span style="color: red"> SCHOOL</span></span><br/>
+                                    <span style="font-size: 25px"> [KENRES]</span></b><br>OPP. ASSEMBLIES OF GOD'S CHURCH MADA STATION ROAD, NASSARAWA EGGON. NASARAWA STATE</br></center></td>&nbsp; &nbsp;&nbsp; &nbsp; 
+                        <td colspan="4"><img src="../image.jpg"  class="profile"  width="130px" height="130px" /> </td>
+                                                
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <table border="1" Style="margin-left: 15px;width: 98%">
+                                <tr>
+                                    <td colspan="4" style="background: orangered"> <center><h6 style=" color:white">ACADEMIC RECORD</h6></center></td>
+                                </tr>
+                                <tr style="background:white">
+                                    <td><h7>  Name: <b> <h:outputText value=" #{classreportController.name}"/></b></h7></td>
+                                    <td><h7>  Class: <b> <h:outputText value=" #{classreportController.classcode}"/></b></h7>
+                                    </td>  
+                                    <td colspan="2"> <h7>  Sex <b> <h:outputText value=" #{classreportController.sex}"/></b></h7></td>
+
+                                </tr>
+                                <tr style="background: white">
+                                    <td>  <h7>Session:  <b> <h:outputText value=" #{classreportController.acasession}"/></b></h7>
+                                    </td>
+                                    <td >
+                                        <h7>  Term: <b> <h:outputText value="#{classreportController.term} "/></b></h7>
+
+                                    </td>
+                                    <td colspan="2">   <h7>Class Enrollment: <b> <h:outputText value="#{classreportController.classEnrollment} "/></b></h7> </td>
+                                   </tr>
+                                  <tr>
+                                    <td >
+                                        <h7>  Maximum Attendance: <b> <h:outputText value="#{classreportController.max} "/></b></h7>
+
+                                    </td>
+                                    
+                                    <td >
+                                        <h7>  Days Present: <b> <h:outputText value="#{classreportController.presence} "/></b></h7>
+
+                                    </td>
+                                    <td >
+                                        <h7>  Days Absent: <b> <h:outputText value="#{classreportController.absence} "/></b></h7>
+
+                                    </td>
+
+                                </tr>
+                                             <tr>
+                                    <td colspan="4" style="background: orangered">      <center><h5><b style=" color: darkblue"> CONTINUOUS ASSESSMENT DOSSIER </b></h5></center>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <h:dataTable value="#{classreportController.findByRegno}" var="stud" columnClasses="focus" class="table table-responsive" rules="all"  styleClass="people" style="border:1px #004d40 solid; width: 98%; height:100% ; margin-left: 15px;" >
+
+                                
+                                <h:column >
+                                    <f:facet name="header">
+                                        (A) SUBJECTS<span style="color:#c7ffba">*****************</span>
+                                    </f:facet>                  
+                                    <b style="color:darkblue"> #{stud.subjects}</b>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        ASS<span style="color:#c7ffba">*</span>I<br/><center>10%</center>
+                                    </f:facet>
+                                    <center>        #{stud.ass1}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        ASS<span style="color:#c7ffba">*</span>II<br/><center>10%</center>
+                                    </f:facet>
+                                    <center>    #{stud.ass2}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        ASS<span style="color:#c7ffba">*</span>III<br/><center>10%</center>
+                                    </f:facet>
+                                    <center>   #{stud.ass3}</center>
+                                </h:column>
+                          
+                                <h:column>
+                                <f:facet name="header">
+                                    Exam (70%)
+                                </f:facet>
+                                <center style="background-color:red;color:white"> #{stud.exam}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Total (100%)
+                                    </f:facet>
+                                    <center style="background-color: greenyellow;color:blue"> #{stud.total}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                   Class Avg
+                                    </f:facet>
+                                    <center style="background-color: #00695c;color:white"> #{stud.classavg}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Highest
+                                    </f:facet>
+                                    <center> #{stud.highest}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Lowest
+                                    </f:facet>
+                                    <center> #{stud.lowest}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Position
+                                    </f:facet>
+                                    <center> #{stud.position}</center>
+                                </h:column>
+
+                                <h:column>
+                                    <f:facet name="header">
+                                        Grade
+                                    </f:facet>
+                                    <center  style="background-color: red;color:white"> #{stud.grade}</center>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Remark<span style="color:#c7ffba">******</span>
+                                    </f:facet>
+                                    #{stud.remark}
+                                </h:column>
+
+                            </h:dataTable>
+                        </td>
+                        <td>
+                            <table border="1" style=" font-size: 9px; width: 96%; background:#ffffff " >
+                                <tr>
+                                    <th><center>(B) AFFECTIVE DEVELOPMENT</center></th>
+                                    <th>RATING<br/> (1-5)</th>
+                                </tr>
+                                <tr>
+                                    <td>Alertness</td>
+                                    <td><center> <b> <h:outputText value="#{classreportController.alertness} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Punctuality</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.punctuation} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Reliability</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.reliability} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Initiative</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.initiativeness} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Leadership</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.leadership} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Courtesy</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.courtesy} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Self Control</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.selfcontrol} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Spirit of Service</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.spiritservice} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Perseverance</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.perseverance} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Consideration</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.consideration} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Team Spirit</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.teamspirit} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Friendliness and Generosity</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.friendlyness} "/></b> </center></td>
+                                </tr>
+
+                            </table> 
+                            <table border="1" style=" font-size: 9px; width: 96%;background-color: #ffffff ">
+                                <tr>
+                                    <th><center>(C) PSYCHOMOTOR</center></th>
+                                    <th>RATING<br/> (1-5)</th>
+                                </tr>
+                                <tr>
+                                    <td>Hand Writing</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.handwritting} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Fluency</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.fluency} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Games</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.games} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Sports</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.sports} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Gymnastic</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.gymnastic} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Handling tools</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.handlingtools} "/></b> </center></td>
+                                </tr>
+                                <tr>
+                                    <td>Drawing and Painting</td>
+                                    <td><center><b> <h:outputText value="#{classreportController.drawing} "/></b> </center></td>
+                                </tr>
+                            </table> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <table border="1" style=" width: 98%; margin-left: 15px ">
+                                <tr >
+                                    <td> Maximum  Score :<b> <h:outputText value=" #{classreportController.min_number}"/></b></td>
+                                    <td>   Total  Score:<b> <h:outputText value=" #{classreportController.studentTotal}"/></b></td>
+                                    <td>  Average:<b> <h:outputText value=" #{classreportController.studentAvg}"/></b></td>
+                                    <td>  Position:<b> <h:outputText value=" #{classreportController.studentPosition}"/></b></td>
+
+                                </tr>
+                                
+                                <tr>
+                                    <td>   Class Teacher's Remark: <b> <h:outputText value=" #{classreportController.formRemark}"/>
+                                        </b> 
+                                    </td>
+                                    <td colspan="2">
+                                        Name: <b> <h:outputText value=" #{classreportController.seniorposition}"/>
+                                        </b>
+                                    </td>
+                                    <td colspan="2">                                 
+                                    Signature: <img src="../formsign.jpg" width="75px" height="15px"/> 
+                                </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Head Teacher's Remark: <b> <h:outputText value=" #{classreportController.prinRemark}"/>
+                                        </b>
+                                    </td>
+                                    <td colspan="2">
+                                        Name:<b> 
+                                            <h:outputText value=" #{classreportController.overallposition}"/>
+                                                 </b>
+                                    </td>
+                                    <td colspan="2">
+                                        Signature: <img src="../formsign.jpg" width="75px" height="15px"/>
+                                    </td>
+                                  
+                                </tr>
+                                <tr style="background-color: #c7ffba">
+                                    <td colspan="4">
+                                        <span style="font-size: 11px">Key to Rating: 5=<b>Excellent,</b> 4=<b>Very Good,</b> 3=<b>Good,</b> 2=<b>Fair,</b> 1=<b>Poor</b></span><br/>
+                                        <span style="font-size:12px">(Grading System: 75 Above='A':<b>Excellent,</b> 70-74='B':<b>Very Good,</b> 55-69='C':<b>Good,</b> 40-54='D':<b>Fair,</b> 39 below='E':<b>Fail,</b>) </span> <br/> <center>  <span style="font-size:11px">  Powered By:  NelsPeace Software Innovation - http://www.nelspeacesoftino.com +2347066652626, +2348154800458,+2349075139408</span></center>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="4">
+                            <table border="1" style=" width: 30%; margin-left: 15px ">
+                    <tr>
+                   
+                        <td style=" border:1px #004d40 solid">
+                            NEXT TERM BEGINS:
+                        </td>
+                        <td style=" border:1px #004d40 solid">
+                            <b> 
+                                <h:outputText value=" #{classreportController.nextermbegin}"/>
+                            </b>                            
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td style=" border:1px #004d40 solid">
+                            NEXT TERM FEES:
+                        </td>
+                        <td style=" border:1px #004d40 solid">
+                            <b> 
+                                N<h:outputText value=" #{classreportController.nextermfees}"/>
+                            </b>                            
+                        </td>                       
+                    </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                          
+                    <tr>
+                        <td colspan="4">
+                            <br></br>
+                            <center style=" color: darkblue"><h6><b>ANNUAL RESULT SUMMARY</b></h6>
+                            <h:dataTable value="#{classreportController.findAnualRegno}" var="stud" columnClasses="focus" class="table table-responsive" rules="all"  styleClass="people" style=" border:1px #004d40 solid; font-size:10px;width: 35%; background: white" >
+                                <h:column >
+                                    <f:facet name="header">
+                                        Total<span style="color:#c7ffba"></span>
+                                    </f:facet>                  
+                                    <b style="color:darkblue"> #{stud.finaltotal}</b>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Avg.<span style="color:#c7ffba"></span>
+                                    </f:facet>
+                                    <b style="color:darkblue"> #{stud.finalaverage}</b>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">
+                                        Posi.<span style="color:#c7ffba"></span>
+                                    </f:facet>
+                                    <b style="color:darkblue"> #{stud.classposition}</b>
+                                </h:column>                                   
+                                    <h:column>
+                                    <f:facet name="header">
+                                        Remark<span style="color:#c7ffba"></span>
+                                    </f:facet>
+                                        <b style="color:darkblue"> #{stud.remark}</b>
+                                </h:column>
+                                </h:dataTable>
+                                </center>
+                                </td>  
+                    </tr>
+                </table>
+            </center>
+        </div>
+        <div class="row">
+            <div class="col-1"  style=" margin-left: 4%">
+                <h:form>        <h:commandButton value="Print" onclick="javascript:printDiv('printdiv')" style=" cursor: pointer;" class="btn-success"/>
+
+                </h:form>
+            </div>
+        </div>
+    </h:body>
+</html>
+

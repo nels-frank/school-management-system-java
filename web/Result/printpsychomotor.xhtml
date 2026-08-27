@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>PSYCHOMOTOR SCORE SHEET</title>
+        <link rel="shortcut icon" href="images/Jac Logo.JPG" type="image/x-icon"/>
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+        <style type="text/css">
+            h3{
+                color:#3a414a; 
+
+            }
+            tr.oddrows {
+
+                color: black;
+                font-size:12px;
+            }
+
+
+            tr.evenrows {
+                color: black;
+                font-size:12px;
+            }
+            table{
+                width: 100%
+            }
+            table.people th{
+                background-color: white;
+                color: black;
+                height: 10px;
+                font-size: 14px
+            }
+
+        </style>
+        <script language="javascript" type="text/javascript">
+            function printDiv(divID) {
+                //Get the HTML of div
+                var divElements = document.getElementById(divID).innerHTML;
+                //Get the HTML of whole page
+                var oldPage = document.body.innerHTML;
+
+                //Reset the page's HTML with div's HTML only
+                document.body.innerHTML =
+                        "<html><head><title></title></head><body>" +
+                        divElements + "</body></html>";
+
+                //Print Page
+                window.print();
+
+                //Restore orignal HTML
+                document.body.innerHTML = oldPage;
+           }
+  </script>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div class="row">
+                <div class="col-2" style=" margin-top: 3%; margin-left: 2%">
+                    <h:selectOneMenu value="#{computeresultController.examsession}" class="form-control">
+                        <f:selectItem itemValue="" itemLabel="Select Session"/>
+                        <f:selectItem itemValue="2019/2020" itemLabel="2019/2020"/>
+                        <f:selectItem itemValue="2020/2021" itemLabel="2020/2021"/>
+                        <f:selectItem itemValue="2021/2022" itemLabel="2021/2022"/>
+                        <f:selectItem itemValue="2022/2023" itemLabel="2022/2023"/>
+                        <f:selectItem itemValue="2023/2024" itemLabel="2023/2024"/>                       
+                        <f:selectItem itemValue="2024/2025" itemLabel="2024/2025"/>
+                        <f:selectItem itemValue="2025/2026" itemLabel="2025/2026"/>
+                        <f:selectItem itemValue="2026/2027" itemLabel="2026/2027"/>
+                        <f:selectItem itemValue="2027/2028" itemLabel="2027/2028"/>
+                        <f:selectItem itemValue="2028/2029" itemLabel="2028/2029"/>                      
+                        <f:selectItem itemValue="2029/2030" itemLabel="2029/2030"/>
+                        <f:selectItem itemValue="2030/2031" itemLabel="2030/2031"/>
+                        <f:selectItem itemValue="2031/2032" itemLabel="2031/2032"/>
+                        <f:selectItem itemValue="2032/2033" itemLabel="2032/2033"/>
+                        <f:selectItem itemValue="2033/2034" itemLabel="2033/2034"/>                       
+                        <f:selectItem itemValue="2034/2035" itemLabel="2034/2035"/>
+                        <f:selectItem itemValue="2035/2036" itemLabel="2035/2036"/>
+                        <f:selectItem itemValue="2036/2037" itemLabel="2036/2037"/>
+                        <f:selectItem itemValue="2037/2038" itemLabel="2037/2038"/>
+                        <f:selectItem itemValue="2038/2039" itemLabel="2038/2039"/>
+                        <f:selectItem itemValue="2039/2040" itemLabel="2039/2040"/>
+                        </h:selectOneMenu>
+                        <h:selectOneMenu value="#{computeresultController.term}" class="form-control">
+                            <f:selectItem itemValue="" itemLabel="Select Term"/>
+                            <f:selectItem itemValue="1ST TERM" itemLabel="1ST TERM"/>
+                            <f:selectItem itemValue="2ND TERM" itemLabel="2ND TERM"/>
+                            <f:selectItem itemValue="3RD TERM" itemLabel="3RD TERM"/>
+                        </h:selectOneMenu>
+                    <h:selectOneMenu value="#{computeresultController.level}" onchange="submit()" class="form-control">
+                        <f:selectItem itemValue="" itemLabel="Select Level"/>
+                        <f:selectItem itemValue="10" itemLabel="Pre-Nursery"/>
+                        <f:selectItem itemValue="101" itemLabel="Nursery One"/>
+                        <f:selectItem itemValue="102" itemLabel="Nursery Two"/>
+                        <f:selectItem itemValue="103" itemLabel="Nursery Three"/>
+                        <f:selectItem itemValue="100" itemLabel="Primary One"/>
+                        <f:selectItem itemValue="200" itemLabel="Primary Two"/>
+                        <f:selectItem itemValue="300" itemLabel="Primary Three"/>
+                        <f:selectItem itemValue="400" itemLabel="Primary Four"/>
+                        <f:selectItem itemValue="500" itemLabel="Primary Five"/>
+                        <f:selectItem itemValue="600" itemLabel="Primary Six"/>
+                        <f:selectItem itemValue="1" itemLabel="Basic 7"/>
+                        <f:selectItem itemValue="2" itemLabel="Basic 8"/>
+                        <f:selectItem itemValue="3" itemLabel="Basic 9"/>
+                        <f:selectItem itemValue="4" itemLabel="SSS 1"/>
+                        <f:selectItem itemValue="5" itemLabel="SSS 2"/>
+                        <f:selectItem itemValue="6" itemLabel="SSS 3"/>
+                        <f:selectItem itemValue="7" itemLabel="Pure Science"/>
+                        <f:selectItem itemValue="8" itemLabel="Social Science"/>
+                        <f:selectItem itemValue="9" itemLabel="Arts"/>
+                        <f:selectItem itemValue="11" itemLabel="Extra class"/>
+                    </h:selectOneMenu>             
+                    <h:selectOneMenu value="#{computeresultController.classcode}" onchange="submit()" class="form-control">
+                        <f:selectItem itemValue="" itemLabel="Select Class"/>
+                        <f:selectItems value="#{computeresultController.classByLevel}" var="class" itemValue="#{class.classcode}" itemLabel="#{class.classcode}"/>
+                    </h:selectOneMenu>           
+        </div>
+            </div>
+        <br></br>
+        
+            <div class="row">
+                <div class="col-1" style=" margin-left: 4%">
+                    <h:commandButton value="Print" onclick="javascript:printDiv('printdiv')" style=" cursor: pointer;" class="btn-success"/>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row " >
+
+                <div class="col-11" style="  margin-left:2%" id="printdiv" >
+                    <table>
+                        <tr>
+                              
+                            <td> <b style=" font-size: 20px"> KENWILL REMEDIAL SCHOOL [KENRES]</b><br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>STUDENTS PSYCHOMOTOR SCORE SHEET</b>
+                                <hr/><br/>
+
+                            </td>  
+                            <td> </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Class:<b> <h:outputText value=" #{computeresultController.classcode}"/></b>
+                            </td>
+                        </tr>
+                        <tr>
+                       <td>Session:<b><h:outputText value="#{computeresultController.examsession}"/></b> Term:<b><h:outputText value="#{computeresultController.term}"/></b></td>
+                        </tr>                       
+                    </table>
+                    <h:dataTable binding="#{table}" value="#{computeresultController.allPsychomotor}" var="stud" rowClasses="oddrows,evenrows" rules="all" width="100%" styleClass="people" border="1" >
+                        <h:column>
+                            <f:facet name="header">
+                               S/N
+                            </f:facet>
+                        <center>   <h:outputText value="#{table.rowIndex+1}"/> </center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Name<span style="color: greenyellow">*</span>of<span style="color: #fff">*</span>Pupils<span style="color: #fff">*********</span>
+                            </f:facet>     
+                            <b>#{stud.name}</b>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                              alertness
+                            </f:facet>
+                            <center>        #{stud.alertness}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                              punc
+                            </f:facet>
+                            <center>    #{stud.punctuation}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                            reliable
+                            </f:facet>
+                            <center>   #{stud.reliability}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                               initiative
+                            </f:facet>
+                            <center>     #{stud.initiativeness}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                lead
+                            </f:facet>
+                            <center>      #{stud.leadership}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Courtesy
+                            </f:facet>
+                            <center> #{stud.courtesy}</center>
+                        </h:column>
+                         <h:column>
+                            <f:facet name="header">
+                                Control
+                            </f:facet>
+                             <center> #{stud.selfcontrol}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                service
+                            </f:facet>
+                            <center> #{stud.spiritservice}</center>
+                        </h:column>    
+                        <h:column>
+                            <f:facet name="header">
+                               perse
+                            </f:facet>
+                            <center> #{stud.perseverance}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                               cons
+                            </f:facet>
+                            <center> #{stud.consideration}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                               spirit
+                            </f:facet>
+                            <center> #{stud.teamspirit}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                              generosity
+                            </f:facet>
+                            <center> #{stud.friendlyness}</center>
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">
+                                H/Writing
+                            </f:facet>
+                            <center> #{stud.handwritting}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                fluency
+                            </f:facet>
+                            #{stud.fluency}
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">
+                            games
+                            </f:facet>
+                            <center>#{stud.games}</center>
+                        </h:column> 
+                        <h:column>
+                            <f:facet name="header">
+                            sports
+                            </f:facet>
+                         <center>#{stud.sports}</center>   
+                        </h:column> 
+                        <h:column>
+                            <f:facet name="header">
+                            gymnastic
+                            </f:facet>
+                                <center>#{stud.gymnastic}</center>      
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                            tools
+                            </f:facet>
+                           <center>#{stud.handlingtools}</center>      
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                            painting
+                            </f:facet>
+                            <center>#{stud.drawing}</center>      
+                        </h:column>                       
+                    </h:dataTable>
+                </div>
+            </div> 
+        </h:form>
+        <script>
+            $(document).on("ready", function () {
+                $('select').material_select();
+            });
+        </script>
+    </h:body>
+</html>
+

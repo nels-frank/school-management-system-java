@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Exams Computation</title>
+        <link rel="shortcut icon" href="images/Jac Logo.JPG" type="image/x-icon"/>
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <style type="text/css">
+
+           tr.oddrows {
+                background-color: #333333;
+                color: yellowgreen;
+            }
+
+
+            tr.evenrows {
+                background-color: #0d253d;
+                color: white;
+            }
+            table{
+                width: 100%
+            }
+            table.people th{
+                background-color: #0d253d;
+                color: white;
+                height: 10px;
+            }
+            a{
+                color:white;
+            }
+        </style>
+    </h:head>
+    <h:body style="background: #333333;color: yellowgreen"> 
+        
+        <h:form>
+
+            <div class="row ">
+                <div class="col s12 m2"  style=" border:1px #004d40 solid; margin-left: 2%">
+                    <h:outputText value="#{computeresultController.name}"/> 
+                    <h:selectOneMenu value="#{computeresultController.ass1}" class="form-control" disabled="true">
+                        <f:selectItem itemValue="" itemLabel="Select Ass"/>
+                        <f:selectItem itemValue="0" itemLabel="0"/>
+                        <f:selectItem itemValue="1" itemLabel="1"/>
+                        <f:selectItem itemValue="2" itemLabel="2"/>
+                        <f:selectItem itemValue="3" itemLabel="3"/>
+                        <f:selectItem itemValue="4" itemLabel="4"/>
+                        <f:selectItem itemValue="5" itemLabel="5"/>
+                      
+                    </h:selectOneMenu>
+                    <h:selectOneMenu value="#{computeresultController.ass2}" class="form-control" disabled="true">
+                        <f:selectItem itemValue="" itemLabel="Select PRJ"/>
+                        <f:selectItem itemValue="0" itemLabel="0"/>
+                        <f:selectItem itemValue="1" itemLabel="1"/>
+                        <f:selectItem itemValue="2" itemLabel="2"/>
+                        <f:selectItem itemValue="3" itemLabel="3"/>
+                        <f:selectItem itemValue="4" itemLabel="4"/>
+                        <f:selectItem itemValue="5" itemLabel="5"/>
+                       
+                        
+                    </h:selectOneMenu>
+                    <h:selectOneMenu value="#{computeresultController.test1}" class="form-control" disabled="true">
+                        <f:selectItem itemValue="" itemLabel="Select Test"/>
+                        <f:selectItem itemValue="0" itemLabel="0"/>
+                        <f:selectItem itemValue="1" itemLabel="1"/>
+                        <f:selectItem itemValue="2" itemLabel="2"/>
+                        <f:selectItem itemValue="3" itemLabel="3"/>
+                        <f:selectItem itemValue="4" itemLabel="4"/>
+                        <f:selectItem itemValue="5" itemLabel="5"/>
+                        <f:selectItem itemValue="6" itemLabel="6"/>
+                        <f:selectItem itemValue="7" itemLabel="7"/>
+                        <f:selectItem itemValue="8" itemLabel="8"/>
+                        <f:selectItem itemValue="9" itemLabel="9"/>
+                        <f:selectItem itemValue="10" itemLabel="10"/>
+                        <f:selectItem itemValue="11" itemLabel="11"/>
+                        <f:selectItem itemValue="12" itemLabel="12"/>
+                        <f:selectItem itemValue="13" itemLabel="13"/>
+                        <f:selectItem itemValue="14" itemLabel="14"/>
+                        <f:selectItem itemValue="15" itemLabel="15"/>
+                        <f:selectItem itemValue="16" itemLabel="16"/>
+                        <f:selectItem itemValue="17" itemLabel="17"/>
+                        <f:selectItem itemValue="18" itemLabel="18"/>
+                        <f:selectItem itemValue="19" itemLabel="19"/>
+                        <f:selectItem itemValue="20" itemLabel="20"/>
+                        
+                    </h:selectOneMenu>
+                  
+
+                </div>
+                <div class="col s12 m2"  style=" border:1px #004d40 solid; margin-left: 2%">
+                    <h:selectOneMenu value="#{computeresultController.ass3}" class="form-control" disabled="true">
+                        <f:selectItem itemValue="" itemLabel="Select Ass"/>
+                        <f:selectItem itemValue="0" itemLabel="0"/>
+                        <f:selectItem itemValue="1" itemLabel="1"/>
+                        <f:selectItem itemValue="2" itemLabel="2"/>
+                        <f:selectItem itemValue="3" itemLabel="3"/>
+                        <f:selectItem itemValue="4" itemLabel="4"/>
+                        <f:selectItem itemValue="5" itemLabel="5"/>
+                    </h:selectOneMenu>
+                    <h:selectOneMenu value="#{computeresultController.ass4}" class="form-control" disabled="true">
+                        <f:selectItem itemValue="" itemLabel="Select PRJ"/>
+                        <f:selectItem itemValue="0" itemLabel="0"/>
+                        <f:selectItem itemValue="1" itemLabel="1"/>
+                        <f:selectItem itemValue="2" itemLabel="2"/>
+                        <f:selectItem itemValue="3" itemLabel="3"/>
+                        <f:selectItem itemValue="4" itemLabel="4"/>
+                        <f:selectItem itemValue="5" itemLabel="5"/>
+                        
+                    </h:selectOneMenu>
+                    <h:selectOneMenu value="#{computeresultController.test2}" class="form-control" disabled="true">
+                        <f:selectItem itemValue="" itemLabel="Select Test"/>
+                         <f:selectItem itemValue="0" itemLabel="0"/>
+                        <f:selectItem itemValue="1" itemLabel="1"/>
+                        <f:selectItem itemValue="2" itemLabel="2"/>
+                        <f:selectItem itemValue="3" itemLabel="3"/>
+                        <f:selectItem itemValue="4" itemLabel="4"/>
+                        <f:selectItem itemValue="5" itemLabel="5"/>
+                        <f:selectItem itemValue="6" itemLabel="6"/>
+                        <f:selectItem itemValue="7" itemLabel="7"/>
+                        <f:selectItem itemValue="8" itemLabel="8"/>
+                        <f:selectItem itemValue="9" itemLabel="9"/>
+                        <f:selectItem itemValue="10" itemLabel="10"/>
+                        <f:selectItem itemValue="11" itemLabel="11"/>
+                        <f:selectItem itemValue="12" itemLabel="12"/>
+                        <f:selectItem itemValue="13" itemLabel="13"/>
+                        <f:selectItem itemValue="14" itemLabel="14"/>
+                        <f:selectItem itemValue="15" itemLabel="15"/>
+                        <f:selectItem itemValue="16" itemLabel="16"/>
+                        <f:selectItem itemValue="17" itemLabel="17"/>
+                        <f:selectItem itemValue="18" itemLabel="18"/>
+                        <f:selectItem itemValue="19" itemLabel="19"/>
+                        <f:selectItem itemValue="20" itemLabel="20"/>
+                    </h:selectOneMenu>
+                    
+<h:inputText  value="#{computeresultController.exam}" onkeypress="if (event.which &lt; 48 || event.which &gt; 57) return false;" class="form-control" >
+                        <f:passThroughAttribute name="placeholder" value="EXAM"/>
+                    </h:inputText>
+                    <h:commandButton action="#{computeresultController.saveRecord()}" class="waves-effect waves-light btn"  value="Save" style=" cursor: pointer">
+                    </h:commandButton>
+
+                  
+                </div>
+            
+                <div class="col s12 m2" style=" margin-top: 3%">
+
+                    <h:selectOneMenu value="#{computeresultController.level}" onchange="submit()" class="form-control">
+                        <f:selectItem itemValue="" itemLabel="Select Level"/>
+                         <f:selectItem itemValue="10" itemLabel="Pre-Nursery"/>
+                            <f:selectItem itemValue="101" itemLabel="Nursery One"/>
+                            <f:selectItem itemValue="102" itemLabel="Nursery Two"/>
+                            <f:selectItem itemValue="103" itemLabel="Nursery Three"/>
+                            <f:selectItem itemValue="100" itemLabel="Primary One"/>
+                            <f:selectItem itemValue="200" itemLabel="Primary Two"/>
+                            <f:selectItem itemValue="300" itemLabel="Primary Three"/>
+                            <f:selectItem itemValue="400" itemLabel="Primary Four"/>
+                            <f:selectItem itemValue="500" itemLabel="Primary Five"/>
+                            <f:selectItem itemValue="600" itemLabel="Primary Six"/>
+                        <f:selectItem itemValue="1" itemLabel="JSS 1"/>
+                        <f:selectItem itemValue="2" itemLabel="JSS 2"/>
+                        <f:selectItem itemValue="3" itemLabel="JSS 3"/>
+                        <f:selectItem itemValue="4" itemLabel="SSS 1"/>
+                        <f:selectItem itemValue="5" itemLabel="SSS 2"/>
+                        <f:selectItem itemValue="7" itemLabel="Pure Science"/>
+                        <f:selectItem itemValue="8" itemLabel="Social Science"/>
+                        <f:selectItem itemValue="9" itemLabel="Arts"/>
+                        <f:selectItem itemValue="11" itemLabel="Extra class"/>
+                    </h:selectOneMenu>
+                    <h:selectOneMenu value="#{computeresultController.subjects}" onchange="submit()" class="form-control">
+                        <f:selectItem itemValue="" itemLabel="Select Subject"/>
+                        <f:selectItems value="#{computeresultController.allSubjects}" var="sub" itemValue="#{sub.subjectname}" itemLabel="#{sub.subjectname}"/>
+                    </h:selectOneMenu>
+                    <h:selectOneMenu value="#{computeresultController.classcode}" onchange="submit()" class="form-control">
+                        <f:selectItem itemValue="" itemLabel="Select Class"/>
+                        <f:selectItems value="#{computeresultController.classByLevel}" var="class" itemValue="#{class.classcode}" itemLabel="#{class.classcode}"/>
+                    </h:selectOneMenu>
+                    <h:commandButton class="waves-effect waves-light btn" style=" background: orangered" action="#{computeresultController.setPosition()}"   value="Set Position">
+                    </h:commandButton>
+                </div>
+                <div class="col s12 m2" style=" margin-top: 3%">
+                    <h:commandButton class="waves-effect waves-light btn" style=" background: yellowgreen" action="#{computeresultController.reSet()}"  value="reset">
+                    </h:commandButton>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-12"  >
+                    SUBJECT: <h:outputText value="#{computeresultController.subjects}"/>   CLASS: <h:outputText value="#{computeresultController.classcode}"/>
+                    <h:dataTable binding="#{table}" value="#{computeresultController.listOfStudent}" var="stud" rowClasses="oddrows,evenrows" rules="all" width="100%" styleClass="people" style="border:1px " >
+<h:column>
+                            <f:facet name="header">
+                               SN
+                            </f:facet>
+    <center>   <h:outputText value="#{table.rowIndex+1}"/> </center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Name of Pupils<span style="color: #333333">.........</span>
+                            </f:facet>
+                          
+                            <h:commandLink action="#{computeresultController.sendCompute(stud)}" value="#{stud.name}" />
+                    
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">
+                                Ass I
+                            </f:facet>
+                            <center>        #{stud.ass1}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                PRJ I
+                            </f:facet>
+                            <center>    #{stud.ass2}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Test 1
+                            </f:facet>
+                            <center>   #{stud.test1}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Ass II
+                            </f:facet>
+                            <center>     #{stud.ass3}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                PRJ II
+                            </f:facet>
+                            <center>      #{stud.ass4}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Test 2
+                            </f:facet>
+                            <center> #{stud.test2}</center>
+                        </h:column>
+                         <h:column>
+                            <f:facet name="header">
+                                Exam (40)
+                            </f:facet>
+                             <center> #{stud.exam}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Total (100%)
+                            </f:facet>
+                            <center> #{stud.total}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                AVG
+                            </f:facet>
+                            <center> #{stud.classavg}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Highest
+                            </f:facet>
+                            <center> #{stud.highest}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Lowest
+                            </f:facet>
+                            <center> #{stud.lowest}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Position
+                            </f:facet>
+                            <center> #{stud.position}</center>
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">
+                                Grade
+                            </f:facet>
+                            <center> #{stud.grade}</center>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Remark
+                            </f:facet>
+                            #{stud.remark}
+                        </h:column>
+
+                        
+                    </h:dataTable>
+                </div>
+
+            </div> 
+        </h:form>    
+
+       <script>
+            $(document).on("ready", function () {
+                $('select').material_select();
+            });
+        </script>
+    </h:body>
+</html>
+

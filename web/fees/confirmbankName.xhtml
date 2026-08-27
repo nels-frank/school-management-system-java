@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Confirm Student's Name</title>      
+       <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="plugins/cubeportfolio/css/cubeportfolio.min.css"/>
+        <link href="css/nivo-lightbox.css" rel="stylesheet" />
+        <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+        <link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
+        <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
+        <link href="css/animate.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet"/>
+
+        <!-- boxed bg -->
+        <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+        <!-- template skin -->
+        <link id="t-colors" href="color/default.css" rel="stylesheet"/>
+    </h:head>
+    <h:body>
+         <div id="page-top" data-spy="scroll" data-target=".navbar-custom">
+            <div id="wrapper">
+
+                <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="background:orangered" >
+
+                    <div class="container navigation" >
+
+                        <div class="navbar-header page-scroll">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <a class="navbar-brand" href="index.html">
+                                <img src="img/btlogo.png" alt="" width="60" height="50" />
+                            </a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="adminpage.jsf">Dashboard</a></li>
+                                
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container -->
+                </nav>
+
+                <center>Registration Page</center>
+                <!-- Section: intro -->
+                <section id="intro" class="intro">
+                    <div class="intro-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-6">
+                                    <div class="form-wrapper">
+                                        <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+
+                                            <div class="panel panel-skin">
+                                                <div class="panel-heading" style="background: #0e3344" >
+                                                    <h5 class="panel-title"><span class="fa fa-pencil-square-o"></span> Confirm Student's Name before you Proceed <small>(It's free!)</small></h5>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                                                    <div id="errormessage"></div>
+                                                    <h:form role="form" class="contactForm lead">
+                                                             <center>
+                         <img src="../image.jpg" class="profile"  width="130px" height="130px"/>
+                         <div class="row"> 
+                        
+                        <div class="form-group">
+                        <h5> <h:outputText  value="#{feespaymentController.name}"  style="color:red"/> </h5> 
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                        <h5 style="color: darkblue">The Standing Fee is: NGN<h:outputText value="#{feespaymentController.balance}" style="color:red"/></h5>                   
+                        
+                        </div>
+                        </div>
+                                                        </center>
+                         <div class="row"  style=" background:#843534;margin-left: 250px;margin-right: 100px">
+                           <h:commandLink action="#{feespaymentController.viewByregno2()}" value="Proceed>>>"  class="btn btn-skin btn-block btn-lg"/>                                                   
+                         </div>                
+                                                    </h:form>                                                    
+                                               </div>
+                                            </div>				
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>		
+                        </div>
+                    </div>                
+                </section>
+          </div>
+         
+  <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+           <!-- Core JavaScript Files -->
+            <script src="designs/js/jquery.min.js"></script>	 
+            <script src="designs/js/bootstrap.min.js"></script>
+            <script src="designs/js/jquery.easing.min.js"></script>
+            <script src="designs/js/wow.min.js"></script>
+            <script src="designs/js/jquery.scrollTo.js"></script>
+            <script src="designs/js/jquery.appear.js"></script>
+            <script src="designs/js/stellar.js"></script>
+            <script src="designs/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+            <script src="designs/js/owl.carousel.min.js"></script>
+            <script src="designs/js/nivo-lightbox.min.js"></script>
+            <script src="designs/js/custom.js"></script>
+            <script src="designs/contactform/contactform.js"></script>
+
+        </div>
+    </h:body>
+</html>
+

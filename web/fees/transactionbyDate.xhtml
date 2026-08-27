@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Date Transactions</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css"/>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
+       
+        <style>
+            a{
+                color: white;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <center><h5 style=" color: darkcyan;" > click on Edit to make changes to the user </h5></center>
+            <div class="container" style=" margin-top: 0%">
+                <div class="row" >
+                <div class=" col s12 m12">
+                    <center>
+
+                        <h:dataTable value="#{feespaymentController.dayofSales}" var="stud" rowClasses="oddrows,evenrows" rules="all" width="100%" styleClass="people" class="table table-striped" style="font-size: 12px">
+                                                                    
+                                                                    <h:column>
+                                                                        <f:facet name="header">
+                                                                        Reg No
+                                                                        </f:facet>
+                                                                        <h:outputText value="#{stud.regno}" />
+                                                                    </h:column>
+                                                                    <h:column>
+                                                                        <f:facet name="header">
+                                                                        Name
+                                                                        </f:facet>
+                                                                        <h:outputText value="#{stud.name}" />
+                                                                    </h:column>
+                                                                    <h:column>
+                                                                        <f:facet name="header">
+                                                                            Amount
+                                                                        </f:facet>
+                                                                        <h:outputText value=" NGN #{stud.amountpaid}" />
+                                                                    </h:column>
+
+                                                                    <h:column>
+                                                                        <f:facet name="header">
+                                                                            Balance
+                                                                        </f:facet>
+                                                                        <h:outputText value=" NGN #{stud.balance}" />
+                                                                    </h:column>
+
+                                                                    <h:column>
+                                                                        <f:facet name="header">
+                                                                            Payment Type
+                                                                        </f:facet>
+                                                                        <h:outputText value="#{stud.paymenttype}" />
+                                                                    </h:column>
+                                                                     <h:column>
+                                                                        <f:facet name="header">
+                                                                            Day/Time
+                                                                        </f:facet>
+                                                                         <h:outputText value="#{stud.datetime}" />
+                                                                    </h:column>
+                                                                    <h:column>
+                                                                        <f:facet name="header">
+                                                                             Teller Number
+                                                                        </f:facet>
+                                                                        <h:outputText value="#{stud.telanumber}" />
+                                                                    </h:column>
+                                                                    <h:column>
+                                                                        <f:facet name="header">
+                                                                            Class Level
+                                                                        </f:facet>
+                                                                        <h:outputText value="#{stud.classlevel}" />
+                                                                    </h:column>
+                                                                    <h:column>
+                                                                        <f:facet name="header">
+                                                                           Class Option
+                                                                        </f:facet>
+                                                                        <h:outputText value="#{stud.classoption}" />
+                                                                    </h:column>
+                            
+                                                                     <h:column>
+                                                                        <f:facet name="header">
+                                                                           Pin
+                                                                        </f:facet>
+                                                                         <h:outputText value="#{stud.pine}" />
+                                                                    </h:column>
+                                                                </h:dataTable>
+                                                                
+                    </center>
+                                                            </div>
+                                                        </div>
+            </div>
+        </h:form>
+       
+    </h:body>
+</html>
+  <h:form role="form" class="contactForm lead">
+                                                              <div class="row" >                 
+                   <h:outputText style="margin-left: 30%; color: red " value="#{studentsinfoController.msg}"/>
+                   <br></br>
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>First Name:</label><br></br>
+                        <h:inputText value="#{studentsinfoController.fname}">
+                            <f:passThroughAttribute name="placeholder" value="First Name..."/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                   
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Middle Name:</label><br></br>
+                        <h:inputText value="#{studentsinfoController.mname}">
+                            <f:passThroughAttribute name="placeholder" value="Middle Name..."/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                    
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Last Name:</label><br></br>
+                        <h:inputText value="#{studentsinfoController.lname}">
+                            <f:passThroughAttribute name="placeholder" value="Last Name..." />
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>State:</label><br></br>
+                        <h:selectOneMenu  value="#{studentsinfoController.state}" onchange="submit()">
+                            <f:selectItem  itemLabel="Select State"/>
+                            <f:selectItem    itemValue="Abia" itemLabel="Abia"/>
+                            <f:selectItem    itemValue="Adamawa" itemLabel="Adamawa"/>
+                            <f:selectItem    itemValue="Akwa Ibom" itemLabel="Akwa Ibom"/>
+                            <f:selectItem    itemValue="Anambra" itemLabel="Anambra"/>
+                            <f:selectItem    itemValue="Bauchi" itemLabel="Bauchi"/>
+                            <f:selectItem    itemValue="Bayelsa" itemLabel="Bayelsa"/>
+                            <f:selectItem    itemValue="Benue" itemLabel="Benue"/>
+                            <f:selectItem    itemValue="Borno" itemLabel="Borno"/>
+                            <f:selectItem    itemValue="Cross River" itemLabel="Cross River"/>
+                            <f:selectItem    itemValue="Delta" itemLabel="Delta"/>
+                            <f:selectItem    itemValue="Ebonyi" itemLabel="Ebonyi"/>
+                            <f:selectItem    itemValue="Edo" itemLabel="Edo"/>
+                            <f:selectItem    itemValue="Ekiti" itemLabel="Ekiti"/>
+                            <f:selectItem    itemValue="Enugu" itemLabel="Enugu"/>
+                            <f:selectItem    itemValue="FCT" itemLabel="FCT"/>
+                            <f:selectItem    itemValue="Gombe" itemLabel="Gombe"/>
+                            <f:selectItem    itemValue="Imo" itemLabel="Imo"/>
+                            <f:selectItem    itemValue="Jigawa" itemLabel="Jigawa"/>
+                            <f:selectItem    itemValue="Kaduna" itemLabel="Kaduna"/>
+                            <f:selectItem    itemValue="Kano" itemLabel="Kano"/>
+                            <f:selectItem    itemValue="Katsina" itemLabel="Katsina"/>
+                            <f:selectItem    itemValue="Kebbi" itemLabel="Kebbi"/>
+                            <f:selectItem    itemValue="Kogi" itemLabel="Kogi"/>
+                            <f:selectItem    itemValue="Kwara" itemLabel="Kwara"/>
+                            <f:selectItem    itemValue="Lagos" itemLabel="Lagos"/>
+                            <f:selectItem    itemValue="Nasarawa" itemLabel="Nasarawa"/>
+                            <f:selectItem    itemValue="Niger" itemLabel="Niger"/>
+                            <f:selectItem    itemValue="Ogun" itemLabel="Ogun"/>
+                            <f:selectItem    itemValue="Ondo" itemLabel="Ondo"/>
+                            <f:selectItem    itemValue="Osun" itemLabel="Osun"/>
+                            <f:selectItem    itemValue="Oyo" itemLabel="Oyo"/>
+                            <f:selectItem    itemValue="Plateau" itemLabel="Plateau"/>
+                            <f:selectItem    itemValue="Rivers" itemLabel="Rivers"/>
+                            <f:selectItem    itemValue="Sokoto" itemLabel="Sokoto"/>
+                            <f:selectItem    itemValue="Taraba" itemLabel="Taraba"/>
+                            <f:selectItem    itemValue="Yobe" itemLabel="Yobe"/>
+                            <f:selectItem    itemValue="Zamfara" itemLabel="Zamfara"/>   
+                        </h:selectOneMenu>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                   
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>LGA</label><br></br>
+                        <h:selectOneMenu  value="#{studentsinfoController.lga}">
+                            <f:selectItem itemLabel="Select LGA"/>
+                            <f:selectItems value="#{studentsinfoController.lgabyState}" var="state" itemValue="#{state.lga}" itemLabel="#{state.lga}"/>
+                        </h:selectOneMenu>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                    
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Religion:</label><br></br>
+                        <h:selectOneMenu  value="#{studentsinfoController.religion}">
+                            <f:selectItem itemLabel="Select Religion"/>
+                            <f:selectItem itemValue="Christianity" itemLabel="Christianity"/>
+                            <f:selectItem itemValue="Islamic" itemLabel="Islamic"/>
+                            <f:selectItem itemValue="Traditional" itemLabel="Traditional"/>
+                        </h:selectOneMenu>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                    
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Tribe:</label><br></br>                        
+                        <h:inputText value="#{studentsinfoController.tribe}">
+                            <f:passThroughAttribute name="placeholder" value="Tribe......"/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                    </div>                  
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Gender:</label><br></br>                      
+                        <h:selectOneMenu  value="#{studentsinfoController.sex}">
+                            <f:selectItem itemLabel="Select Gender"/>
+                            <f:selectItem itemValue="Female" itemLabel="Female"/>
+                            <f:selectItem itemValue="Male" itemLabel="Male"/>                         
+                        </h:selectOneMenu>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-">
+                    <div class="form-group">
+                        <label> Birthday:</label><br></br>                        
+                        <h:inputText value="#{studentsinfoController.dob}" class="datepicker" >
+                            <f:passThroughAttribute name="placeholder" value="Date of Birth"/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                   
+                     <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Health Status:</label><br></br>                          
+                        <h:selectOneMenu  value="#{studentsinfoController.healthstatus}">
+                            <f:selectItem itemLabel="Select Genotype"/>
+                            <f:selectItem itemValue="AA" itemLabel="AA"/>
+                            <f:selectItem itemValue="AS" itemLabel="AS"/>
+                            <f:selectItem itemValue="SS" itemLabel="SS"/>
+                            <f:selectItem itemValue="Unknow" itemLabel="Unknown"/>
+                        </h:selectOneMenu>
+                        <div class="validation"></div>
+                    </div>
+                     </div>                    
+                   <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                    <label>Guardian Name:</label><br></br>                            
+                        <h:inputText value="#{studentsinfoController.guardianname}">
+                            <f:passThroughAttribute name="placeholder" value="Guardian's Name"/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                   </div>
+
+                   <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">                       
+                        <label>Guardian Address:</label><br></br> 
+                        <h:inputText value="#{studentsinfoController.guardianaddress}">
+                            <f:passThroughAttribute name="placeholder" value="Guardian's Address"/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                   </div>                   
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Guardian Occupation:</label><br></br>                       
+                        <h:inputText value="#{studentsinfoController.guardianoccupation}">
+                            <f:passThroughAttribute name="placeholder" value="Guardian's Occupation"/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Guardian Phone:</label><br></br>
+                            <h:inputText value="#{studentsinfoController.guardianno}">
+                            <f:passThroughAttribute name="placeholder" value="Guardian's Number"/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                                  
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Session</label><br></br>
+                        <h:selectOneMenu value="#{studentsinfoController.session}"> 
+                            <f:selectItem itemLabel="Select Session:"/>
+                            <f:selectItem itemValue="2016" itemLabel="2015/2016"/>
+                            <f:selectItem itemValue="2017" itemLabel="2016/2017"/>
+                            <f:selectItem itemValue="2018" itemLabel="2017/2018"/>
+                            <f:selectItem itemValue="2019" itemLabel="2018/2019"/>
+                            <f:selectItem itemValue="2020" itemLabel="2019/2020"/>
+                            <f:selectItem itemValue="2021" itemLabel="2020/2021"/>
+                        </h:selectOneMenu>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                    </div>
+                   <div class="row" >
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Class Level:</label><br></br>
+                        <h:selectOneMenu  value="#{studentsinfoController.classlevel}" onchange="submit()">
+                            <f:selectItem itemLabel="Select Level"/>
+                            <f:selectItem itemValue="1" itemLabel="BASIC7"/>
+                            <f:selectItem itemValue="2" itemLabel="BASIC8"/>
+                            <f:selectItem itemValue="3" itemLabel="BASIC9"/>
+                            <f:selectItem itemValue="4" itemLabel="SSS1"/>
+                            <f:selectItem itemValue="5" itemLabel="SSS2"/>
+                            <f:selectItem itemValue="6" itemLabel="SSS3"/>
+                        </h:selectOneMenu>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Class Option:</label><br></br>
+                         <h:selectOneMenu  value="#{studentsinfoController.classoption}">
+                            <f:selectItem itemLabel="Select Option"/>
+                            <f:selectItems value="#{studentsinfoController.classoptionByClasslevel}" var="classlevel" itemValue="#{classlevel.classoption}" itemLabel="#{classlevel.classoption}"/>                           
+                        </h:selectOneMenu>
+                      <div class="validation"></div>
+                    </div>
+                    </div>
+                    
+                     <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>House:</label><br></br>
+                        <h:selectOneMenu  value="#{studentsinfoController.house}">
+                            <f:selectItem itemLabel="House"/>
+                            <f:selectItem itemValue="Holy Emmanuel" itemLabel="Holy Emmanuel"/>
+                            <f:selectItem itemValue="ST. Thomas" itemLabel="ST. Thomas"/>
+                            <f:selectItem itemValue="ST. Peters" itemLabel="ST. Peters"/>
+                            <f:selectItem itemValue="Our Lady" itemLabel="Our Lady"/>                         
+                        </h:selectOneMenu>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                     <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Pasport:</label><br></br>
+                        <h:inputFile value="#{studentsinfoController.image}"/>
+                        <div class="validation"></div>
+                        </div>
+                     </div>
+                    </div>
+                  
+                    <div class="row"  style=" background:#843534;margin-left: 300px;margin-right: 300px">
+                        <h:commandLink action="#{studentsinfoController.createStudent()}" value="Submit" class="btn btn-skin btn-block btn-lg">
+                    </h:commandLink>
+                         </div>
+                        
+                                     
+                   
+                </h:form>
+

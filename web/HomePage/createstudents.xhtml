@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+     <h:head>
+        <title>Old Students</title>
+         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="plugins/cubeportfolio/css/cubeportfolio.min.css"/>
+        <link href="css/nivo-lightbox.css" rel="stylesheet" />
+        <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+        <link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
+        <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
+        <link href="css/animate.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet"/>
+        <!-- boxed bg -->
+        <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+        <!-- template skin -->
+        <link id="t-colors" href="color/default.css" rel="stylesheet"/>
+     </h:head>   
+    <h:body>      
+        <div id="page-top" data-spy="scroll" data-target=".navbar-custom">
+            <div id="wrapper">
+
+                <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="background:darkblue" >
+
+                    <div class="container navigation" >
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="index.jsf"><b style=" color: yellow">HOME</b></a></li>
+                                
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container -->
+                </nav>
+
+                <center>Registration Page</center>
+                <!-- Section: intro -->
+                <section id="intro" class="intro">
+                    <div class="intro-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-2"></div>
+                                <div class="col-lg-8">
+                                    <div class="form-wrapper">
+                                        <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+
+                                            <div class="panel panel-skin">
+                                                <div class="panel-heading" style="background:orangered" >
+                                                    <h5 class="panel-title"><span class="fa fa-pencil-square-o"></span> Student's Registration Form <small>(It's free!)</small></h5>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                                                    <div id="errormessage"></div>
+                                                              <h:form role="form" class="contactForm lead" enctype="multipart/form-data">
+                                                              <div class="row" >
+                    
+                                                                 
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>House:</label><br></br>
+                        <h:selectOneMenu  value="#{studentsinfoController.house}">
+                            <f:selectItem itemLabel="Select House"/>
+                            <f:selectItem itemValue="Holy Emmanuel" itemLabel="Holy Emmanuel"/>
+                            <f:selectItem itemValue="ST. Thomas" itemLabel="ST. Thomas"/>
+                            <f:selectItem itemValue="ST. Peters" itemLabel="ST. Peters"/>
+                            <f:selectItem itemValue="Our Lady" itemLabel="Our Lady"/>                         
+                        </h:selectOneMenu>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                                                                  
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Session</label><br></br>
+                        <h:selectOneMenu value="#{studentsinfoController.session}"> 
+                        <f:selectItem itemLabel="Select Session"/>
+                        <f:selectItem itemValue="2020" itemLabel="2019/2020"/>
+                        <f:selectItem itemValue="2021" itemLabel="2020/2021"/>
+                        <f:selectItem itemValue="2022" itemLabel="2021/2022"/>
+                        <f:selectItem itemValue="2023" itemLabel="2022/2023"/>
+                        <f:selectItem itemValue="2024" itemLabel="2023/2024"/>                       
+                        <f:selectItem itemValue="2025" itemLabel="2024/2025"/>
+                        <f:selectItem itemValue="2026" itemLabel="2025/2026"/>
+                        <f:selectItem itemValue="2027" itemLabel="2026/2027"/>
+                        <f:selectItem itemValue="2028" itemLabel="2027/2028"/>
+                        <f:selectItem itemValue="2029" itemLabel="2028/2029"/>                      
+                        <f:selectItem itemValue="2030" itemLabel="2029/2030"/>
+                        <f:selectItem itemValue="2031" itemLabel="2030/2031"/>
+                        <f:selectItem itemValue="2032" itemLabel="2031/2032"/>
+                        <f:selectItem itemValue="2033" itemLabel="2032/2033"/>
+                        <f:selectItem itemValue="2034" itemLabel="2033/2034"/>                       
+                        <f:selectItem itemValue="2035" itemLabel="2034/2035"/>
+                        <f:selectItem itemValue="2036" itemLabel="2035/2036"/>
+                        <f:selectItem itemValue="2037" itemLabel="2036/2037"/>
+                        <f:selectItem itemValue="2038" itemLabel="2037/2038"/>
+                        <f:selectItem itemValue="2039" itemLabel="2038/2039"/>
+                        <f:selectItem itemValue="2040" itemLabel="2039/2040"/>
+                    </h:selectOneMenu>
+                    <div class="validation"></div>
+                   </div>
+                    </div>
+                  
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                    <label>Class Level</label><br></br>
+                       <h:selectOneMenu  value="#{studentsinfoController.classlevel}" onchange="submit()">
+                            <f:selectItem itemValue="" itemLabel="Select Class Level"/>
+                            <f:selectItem itemValue="1" itemLabel="BASIC7"/>
+                            <f:selectItem itemValue="2" itemLabel="BASIC8"/>
+                            <f:selectItem itemValue="3" itemLabel="BASIC9"/>
+                            <f:selectItem itemValue="4" itemLabel="SSS1"/>
+                            <f:selectItem itemValue="5" itemLabel="SSS2"/>
+                            <f:selectItem itemValue="6" itemLabel="SSS3"/>
+                        </h:selectOneMenu>
+                    <div class="validation"></div>
+                    </div>
+                    </div>
+                    
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                    <label>Class Option</label><br></br>
+                         <h:selectOneMenu  value="#{studentsinfoController.classoption}">
+                            <f:selectItem itemValue="" itemLabel="Select Class Option"/>
+                            <f:selectItems value="#{studentsinfoController.classoptionByClasslevel}" var="classlevel" itemValue="#{classlevel.classoption}" itemLabel="#{classlevel.classoption}"/>                          
+                        </h:selectOneMenu>
+                    <div class="validation"></div>
+                    </div>
+                    </div>  
+                   <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>State:</label><br></br>
+                        <h:selectOneMenu  value="#{studentsinfoController.state}" onchange="submit()">
+                            <f:selectItem  itemLabel="Select State"/>
+                            <f:selectItem    itemValue="Abia" itemLabel="Abia"/>
+                            <f:selectItem    itemValue="Adamawa" itemLabel="Adamawa"/>
+                            <f:selectItem    itemValue="Akwa Ibom" itemLabel="Akwa Ibom"/>
+                            <f:selectItem    itemValue="Anambra" itemLabel="Anambra"/>
+                            <f:selectItem    itemValue="Bauchi" itemLabel="Bauchi"/>
+                            <f:selectItem    itemValue="Bayelsa" itemLabel="Bayelsa"/>
+                            <f:selectItem    itemValue="Benue" itemLabel="Benue"/>
+                            <f:selectItem    itemValue="Borno" itemLabel="Borno"/>
+                            <f:selectItem    itemValue="Cross River" itemLabel="Cross River"/>
+                            <f:selectItem    itemValue="Delta" itemLabel="Delta"/>
+                            <f:selectItem    itemValue="Ebonyi" itemLabel="Ebonyi"/>
+                            <f:selectItem    itemValue="Edo" itemLabel="Edo"/>
+                            <f:selectItem    itemValue="Ekiti" itemLabel="Ekiti"/>
+                            <f:selectItem    itemValue="Enugu" itemLabel="Enugu"/>
+                            <f:selectItem    itemValue="FCT" itemLabel="FCT"/>
+                            <f:selectItem    itemValue="Gombe" itemLabel="Gombe"/>
+                            <f:selectItem    itemValue="Imo" itemLabel="Imo"/>
+                            <f:selectItem    itemValue="Jigawa" itemLabel="Jigawa"/>
+                            <f:selectItem    itemValue="Kaduna" itemLabel="Kaduna"/>
+                            <f:selectItem    itemValue="Kano" itemLabel="Kano"/>
+                            <f:selectItem    itemValue="Katsina" itemLabel="Katsina"/>
+                            <f:selectItem    itemValue="Kebbi" itemLabel="Kebbi"/>
+                            <f:selectItem    itemValue="Kogi" itemLabel="Kogi"/>
+                            <f:selectItem    itemValue="Kwara" itemLabel="Kwara"/>
+                            <f:selectItem    itemValue="Lagos" itemLabel="Lagos"/>
+                            <f:selectItem    itemValue="Nasarawa" itemLabel="Nasarawa"/>
+                            <f:selectItem    itemValue="Niger" itemLabel="Niger"/>
+                            <f:selectItem    itemValue="Ogun" itemLabel="Ogun"/>
+                            <f:selectItem    itemValue="Ondo" itemLabel="Ondo"/>
+                            <f:selectItem    itemValue="Osun" itemLabel="Osun"/>
+                            <f:selectItem    itemValue="Oyo" itemLabel="Oyo"/>
+                            <f:selectItem    itemValue="Plateau" itemLabel="Plateau"/>
+                            <f:selectItem    itemValue="Rivers" itemLabel="Rivers"/>
+                            <f:selectItem    itemValue="Sokoto" itemLabel="Sokoto"/>
+                            <f:selectItem    itemValue="Taraba" itemLabel="Taraba"/>
+                            <f:selectItem    itemValue="Yobe" itemLabel="Yobe"/>
+                            <f:selectItem    itemValue="Zamfara" itemLabel="Zamfara"/>   
+                        </h:selectOneMenu>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                   
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>LGA</label><br></br>
+                        <h:selectOneMenu  value="#{studentsinfoController.lga}">
+                            <f:selectItem itemLabel="Select LGA"/>
+                            <f:selectItems value="#{studentsinfoController.lgabyState}" var="state" itemValue="#{state.lga}" itemLabel="#{state.lga}"/>
+                        </h:selectOneMenu>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                                                                  
+                   <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Religion:</label><br></br>
+                        <h:selectOneMenu  value="#{studentsinfoController.religion}">
+                            <f:selectItem itemLabel="Select Religion"/>
+                            <f:selectItem itemValue="Christianity" itemLabel="Christianity"/>
+                            <f:selectItem itemValue="Islamic" itemLabel="Islamic"/>
+                            <f:selectItem itemValue="Traditional" itemLabel="Traditional"/>
+                        </h:selectOneMenu>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                    
+                   <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Health Status:</label><br></br>                          
+                        <h:selectOneMenu  value="#{studentsinfoController.healthstatus}">
+                            <f:selectItem itemLabel="Select Genotype"/>
+                            <f:selectItem itemValue="AA" itemLabel="AA"/>
+                            <f:selectItem itemValue="AS" itemLabel="AS"/>
+                            <f:selectItem itemValue="SS" itemLabel="SS"/>
+                            <f:selectItem itemValue="Unknow" itemLabel="Unknown"/>
+                        </h:selectOneMenu>
+                        <div class="validation"></div>
+                    </div>
+                     </div>
+                                                                  
+                   <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Gender:</label><br></br>                      
+                        <h:selectOneMenu  value="#{studentsinfoController.sex}">
+                            <f:selectItem itemLabel="Select Gender"/>
+                            <f:selectItem itemValue="Female" itemLabel="Female"/>
+                            <f:selectItem itemValue="Male" itemLabel="Male"/>                         
+                        </h:selectOneMenu>
+                        <div class="validation"></div>
+                    </div>
+                    </div>                                                                                  
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Surname:</label><br></br>
+                        <h:inputText value="#{studentsinfoController.fname}">
+                            <f:passThroughAttribute name="placeholder" value="Surname..."/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                   
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>First Name:</label><br></br>
+                        <h:inputText value="#{studentsinfoController.mname}">
+                            <f:passThroughAttribute name="placeholder" value="First Name..."/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                    
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Middle Name:</label><br></br>
+                        <h:inputText value="#{studentsinfoController.lname}">
+                            <f:passThroughAttribute name="placeholder" value="Middle Name..." />
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                   
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Tribe:</label><br></br>                        
+                        <h:inputText value="#{studentsinfoController.tribe}">
+                            <f:passThroughAttribute name="placeholder" value="Tribe......"/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                    </div> 
+                   
+                   <div class="col-xs-4 col-sm-4 col-md-">
+                    <div class="form-group">
+                        <label> Birthday: (DD/MM/YYYY) </label><br></br>                        
+                        <h:inputText value="#{studentsinfoController.dob}" class="datepicker" >
+                            <f:passThroughAttribute name="placeholder" value="Date of Birth"/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                   <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                    <label>Guardian's Name:</label><br></br>                            
+                        <h:inputText value="#{studentsinfoController.guardianname}">
+                            <f:passThroughAttribute name="placeholder" value="Guardian's Name"/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                   </div>
+                  
+                   <div class="col-xs-4 col-sm-4 col-md-4">
+                  <div class="form-group">
+                 <label>Guardian's Address:</label>
+                <h:inputTextarea  class="form-control input-md"  value="#{studentsinfoController.guardianaddress}"/>
+                <div class="validation"></div>
+                </div>
+                </div>
+                   
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Guardian's Occupation:</label><br></br>                       
+                        <h:inputText value="#{studentsinfoController.guardianoccupation}">
+                            <f:passThroughAttribute name="placeholder" value="Guardian's Occupation"/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                   
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label>Guardian's Phone:</label><br></br>
+                            <h:inputText value="#{studentsinfoController.guardianno}">
+                            <f:passThroughAttribute name="placeholder" value="Guardian's Number"/>
+                        </h:inputText>
+                        <div class="validation"></div>
+                    </div>
+                    </div>
+                   </div>                       
+                  <label>Passport:</label><br></br>
+                  <h:inputFile value="#{studentsinfoController.image}"/>                 
+                    <div class="row"  style=" background:#843534;margin-left: 300px;margin-right: 300px">
+                        <h:commandLink action="#{studentsinfoController.createStudent()}" value="Submit" class="btn btn-skin btn-block btn-lg">
+                    </h:commandLink>
+                         </div>                                                                 
+                    <h5><h:outputText value="#{studentsinfoController.msg}" style="color: orangered"/></h5>
+                    <p class="lead-footer"><h:outputLabel value="" style="color: red" />  <h:messages style="color: red"/></p>                     
+                                                    </h:form>
+                                                </div>
+                                            </div>				
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>		
+                        </div>
+                    </div>		
+                </section>
+          </div>      
+       <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+           <!-- Core JavaScript Files -->
+            <script src="designs/js/jquery.min.js"></script>	 
+            <script src="designs/js/bootstrap.min.js"></script>
+            <script src="designs/js/jquery.easing.min.js"></script>
+            <script src="designs/js/wow.min.js"></script>
+            <script src="designs/js/jquery.scrollTo.js"></script>
+            <script src="designs/js/jquery.appear.js"></script>
+            <script src="designs/js/stellar.js"></script>
+            <script src="designs/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+            <script src="designs/js/owl.carousel.min.js"></script>
+            <script src="designs/js/nivo-lightbox.min.js"></script>
+            <script src="designs/js/custom.js"></script>
+            <script src="designs/contactform/contactform.js"></script>
+        </div>
+        <script>
+            $(document).on("ready", function () {
+                $('select').material_select();
+            });
+            $('.datepicker').pickadate({
+                selectMonths: true, // Creates a dropdown to control month
+                selectYears: 200 // Creates a dropdown of 15 years to control year
+            });
+        </script>
+    </h:body>
+</html>
+

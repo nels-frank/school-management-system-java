@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Student's Information</title>
+        <link rel="shortcut icon" href="images/Jac Logo.JPG" type="image/x-icon"/>
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <script language="javascript" type="text/javascript">
+            function printDiv(divID) {
+                //Get the HTML of div
+                var divElements = document.getElementById(divID).innerHTML;
+                //Get the HTML of whole page
+                var oldPage = document.body.innerHTML;
+
+                //Reset the page's HTML with div's HTML only
+                document.body.innerHTML =
+                        "<html><head><title></title></head><body>" +
+                        divElements + "</body></html>";
+                //Print Page
+                window.print();
+
+                //Restore orignal HTML
+                document.body.innerHTML = oldPage;
+
+
+            }
+        </script>
+        <style type="text/css">
+            .profile{
+                border-top-left-radius: 50% 50%;
+                border-top-right-radius: 50% 50%;
+                border-bottom-right-radius: 50% 50%;
+                border-bottom-left-radius: 50% 50%;
+            }
+            h3{
+                color:#3a414a; 
+
+            }
+            tr.oddrows {
+
+                color: black;
+                font-size:17px;
+            }
+
+
+            tr.evenrows {
+
+                background-color:  #843534;
+                color: white;
+                font-size:17px;
+            }
+            table{
+                width: 100%
+            }
+            table.people th{
+
+                color: black;
+                height: 13px;
+                font-size: 13px
+            }
+
+        </style>
+        
+    </h:head>
+    <h:body>
+        <h:form>
+            <div class="row" style=" margin-top: 10%">               
+                <div class="container-fluid" style=" background: #F1C050" id="printdiv">
+                  <table style=" background: whitesmoke" >
+                    <tr>
+                        <td>
+                    <div class="row">
+                        <table style=" background: #075b2f">
+                            <tr>
+                                <td>
+                        <div class="col-sm-4">                           
+                  <img src="images/dmstc.jpg" width="150px" height="150px"/> 
+                        </div>               
+                                </td>
+                                <td>
+                        <div class="col-sm-4"> 
+                            <center>  <h1 ><span style="color: white"><b>DAAKU MODEL SCIENCE AND TECHNICAL COLLEGE</b></span></h1></center>                            
+                        </div>
+                                    <center> <h5><span style=" margin-top: 0%; color:  white" ><b>P.O.BOX 51, KATSINA ALA. BENUE STATE.</b></span></h5></center>
+                                </td>
+                                <td>                                 
+                                    <img src="../image.jpg" class="profile"  width="150px" height="150px"/> 
+                                </td>
+                            </tr>
+                        </table>
+                        <center>
+                        <div class="col-sm-3">                                                      
+                        </div> 
+                        </center>
+                       </div>        
+                    <div class="row"  style=" background:#843534;margin-left: 200px;margin-right: 200px">
+                        <div class="col-sm-10">
+                            <center><h3 style=" color: white">Student's Bio Data</h3></center>
+                        </div>
+                    </div>
+                <br></br>               
+    </td> 
+   </tr>
+</table>             
+                 <div class=" col s12 m6">
+                 <h:commandButton  action="#{studentsinfoController.back()}" value="Print" onclick="javascript:printDiv('printdiv')" style=" cursor: pointer;" class="waves-effect waves-light btn" >
+                 </h:commandButton>
+                 </div>
+                 <div class="row"  style=" background: #843534;margin-left: 10px;margin-right: 10px">
+                 <table style=" background: whitesmoke">                
+                 <tr>
+                 <td style="color: #a9302a; font-size: 20px;">Reg Number:</td>   <td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.regno}"/> </td>
+                 <td style="color: #a9302a; font-size: 20px;">Date/Time:</td>   <td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.date}"/> </td>                    
+                </tr>
+                <tr>
+                    <td style="color: #a9302a; font-size: 20px;">Surname: </td> <td style=" font-size: 20px;"> <h:outputText value="#{studentsinfoController.fname}"/> </td> 
+                    <td style="color: #a9302a; font-size: 20px;">First Name:</td> <td style=" font-size: 20px;"> <h:outputText value="#{studentsinfoController.mname}"/></td>                 
+                </tr>
+                    <tr>
+                     <td style="color: #a9302a; font-size: 20px;">Middle Name:</td> <td style=" font-size: 20px;"> <h:outputText value="#{studentsinfoController.lname}"/></td> 
+                    <td style="color: #a9302a; font-size: 20px;">Nationality:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.nationality}"/></td> 
+                    </tr>
+                    <tr>
+                                 
+                     <td style="color: #a9302a; font-size: 20px;">State:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.state}"/></td>  
+                     <td style="color: #a9302a; font-size: 20px;">LGA:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.lga}"/></td>
+                </tr>
+                    
+                  <tr>
+                      <td style="color: #a9302a; font-size: 20px;">Religion:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.religion}"/></td>
+                    <td style="color: #a9302a; font-size: 20px;">Tribe:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.tribe}"/></td>
+                     
+                </tr>
+                    <tr>
+                    <td style="color: #a9302a; font-size: 20px;">Gender:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.sex}"/></td>
+                     <td style="color: #a9302a; font-size: 20px;">Date of Birth:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.dob}"/></td>
+                    </tr>
+                     <tr>
+                     
+                     <td style="color: #a9302a; font-size: 20px;">Genotype:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.healthstatus}"/></td>
+                     <td style="color: #a9302a; font-size: 20px;">Status:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.status}"/></td>
+                </tr>
+                    
+                <tr>
+                  <td style="color: #a9302a; font-size: 20px;">Guardian's Address:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.guardianaddress}"/></td>
+                 <td style="color: #a9302a; font-size: 20px;">Guardian's Name:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.guardianname}"/></td>
+                </tr>
+                   
+                    <tr>
+                        
+                    <td style="color: #a9302a; font-size: 20px;">Guardian's Occupation:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.guardianoccupation}"/></td>
+                        <td style="color: #a9302a; font-size: 20px;">Guardian's Tele:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.guardianno}"/></td>
+                </tr>
+                    
+                    <tr>
+                        <td style="color: #a9302a; font-size: 20px;">Admitted Year:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.session}"/></td>
+                        <td style="color: #a9302a; font-size: 20px;">Level:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.classlevel}"/></td>
+                        
+                </tr>
+                    <tr>
+                        <td style="color: #a9302a; font-size: 20px;">House:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.house}"/></td>
+                        <td style="color: #a9302a; font-size: 20px;">Class:</td><td style=" font-size: 20px;"><h:outputText value="#{studentsinfoController.classoption}"/></td>
+                    </tr>
+            </table>
+                    </div>
+ 
+            <center> <b>Thanks for your Patronage</b><br/></center>
+            </div>      
+            </div>
+             <div class=" col s12 m6">
+                 <h:commandButton class="waves-effect waves-light btn"  action="#{studentsinfoController.back()}" value="Register New Student">
+                    </h:commandButton>
+                    </div>
+        </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>USERS</title>
+        <link rel="shortcut icon" href="images/Jac Logo.JPG" type="image/x-icon"/>
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+        <style type="text/css">
+            h3{
+                color:#3a414a; 
+
+            }
+            tr.oddrows {
+
+                color: black;
+                font-size:12px;
+            }
+
+
+            tr.evenrows {
+                color: black;
+                font-size:12px;
+            }
+            table{
+                width: 100%
+            }
+            table.people th{
+                background-color: white;
+                color: black;
+                height: 10px;
+                font-size: 14px
+            }
+        </style>
+    </h:head>
+    <h:body style=" background-color:#333333;color: yellowgreen">
+        <h:form>
+            <div class="row ">                                
+                    <div class="col-4"  style=" border:1px #004d40 solid; margin-left: 20%; margin-top: 5%">                        
+                        <h:inputText  value="#{resultusersController.username}" class="form-control" >
+                        <f:passThroughAttribute name="placeholder" value="User Name"/>
+                    </h:inputText> 
+                        <h:inputSecret value="#{resultusersController.password}" class="form-control" >
+                        <f:passThroughAttribute name="placeholder" value="Password"/>
+                    </h:inputSecret> 
+                        <h:inputSecret  value="#{resultusersController.confirmpassword}" class="form-control" >
+                        <f:passThroughAttribute name="placeholder" value="Comfirm Password"/>
+                    </h:inputSecret> 
+                        <h:commandButton action="#{resultusersController.createUsers()}" class="waves-effect waves-light btn"  value="SUBMIT" style=" cursor: pointer">
+                    </h:commandButton> 
+                        <h6><h:outputText value="#{resultusersController.msg}" style="color: orangered"/></h6>
+                    </div>                                  
+                 </div>
+                
+                <div class="col-9" style=" background: #F1C050" >
+                    <h:dataTable binding="#{table}" value="#{resultusersController.allUsers}" var="stud" rowClasses="oddrows,evenrows" rules="all" width="100%" styleClass="people">
+                            <h:column>
+                                <f:facet name="header">
+                                    S/N
+                                </f:facet>
+                             <center style="color:darkblue"> #{table.rowIndex+1}</center>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    USER NAME
+                                </f:facet>
+                                <b style="color:darkblue"> #{stud.username}</b>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    ROLE
+                                </f:facet>
+                                <b style="color:darkblue"> #{stud.role}</b>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    STATUS
+                                </f:facet>
+                                <b style="color:darkblue"> #{stud.status}</b>
+                            </h:column>
+                             <h:column>
+                                <f:facet name="header">
+                                    Action
+                                </f:facet>
+                                 <h:commandLink action="#{resultusersController.DeleteUser(stud.username)}"  value="DELETE" style=" color: green"/>
+                            </h:column>                           
+                        </h:dataTable>
+                    </div> 
+               
+              </h:form>
+
+        <script>
+            $(document).on("ready", function () {
+                $('select').material_select();
+            });
+        </script>
+    </h:body>
+</html>
+

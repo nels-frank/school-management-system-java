@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Class Report</title>
+        <link rel="shortcut icon" href="images/Jac Logo.JPG" type="image/x-icon"/>
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+        <style type="text/css">
+
+            tr.oddrows {
+                color: black;
+                font-size:15px;
+            }
+
+
+            tr.evenrows {
+                background-color:  #843534;
+                color: white;
+                font-size:15px;
+            }
+            table{
+                width: 100%
+            }
+            table.people th{
+                background-color: darkcyan;
+                color: white;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div  class="row " style=" background-color: darkcyan">
+                <div class="col-4">
+                </div><div class="col-6">
+                    <h6 style=" color: white"> Class Result</h6>
+                </div>
+                <div class="col-2" style="color:white"></div>
+            </div>
+
+            <center>   
+                <div class="row">
+                    <div class="col-2" style=" margin-top: 3%">
+                        
+                    Next Term Begins (dd/mm/yyyy):
+                    <h:inputText  value="#{classreportController.nextermbegin}" class="form-control" >
+                        <f:passThroughAttribute name="placeholder" value="26/09/2020"/>
+                    </h:inputText>
+                    
+                    Next Term Fees:
+                    <h:inputText  value="#{classreportController.nextermfees}" class="form-control" >
+                        <f:passThroughAttribute name="placeholder" value="Fees (eg. 8,500)"/>
+                    </h:inputText>
+                        
+                        <h:selectOneMenu value="#{classreportController.acasession}" onchange="submit()" class="form-control">
+                        <f:selectItem itemValue="" itemLabel="Select Session"/>
+                        <f:selectItem itemValue="2019/2020" itemLabel="2019/2020"/>
+                        <f:selectItem itemValue="2020/2021" itemLabel="2020/2021"/>
+                        <f:selectItem itemValue="2021/2022" itemLabel="2021/2022"/>
+                        <f:selectItem itemValue="2022/2023" itemLabel="2022/2023"/>
+                        <f:selectItem itemValue="2023/2024" itemLabel="2023/2024"/>                       
+                        <f:selectItem itemValue="2024/2025" itemLabel="2024/2025"/>
+                        <f:selectItem itemValue="2025/2026" itemLabel="2025/2026"/>
+                        <f:selectItem itemValue="2026/2027" itemLabel="2026/2027"/>
+                        <f:selectItem itemValue="2027/2028" itemLabel="2027/2028"/>
+                        <f:selectItem itemValue="2028/2029" itemLabel="2028/2029"/>                      
+                        <f:selectItem itemValue="2029/2030" itemLabel="2029/2030"/>
+                        <f:selectItem itemValue="2030/2031" itemLabel="2030/2031"/>
+                        <f:selectItem itemValue="2031/2032" itemLabel="2031/2032"/>
+                        <f:selectItem itemValue="2032/2033" itemLabel="2032/2033"/>
+                        <f:selectItem itemValue="2033/2034" itemLabel="2033/2034"/>                       
+                        <f:selectItem itemValue="2034/2035" itemLabel="2034/2035"/>
+                        <f:selectItem itemValue="2035/2036" itemLabel="2035/2036"/>
+                        <f:selectItem itemValue="2036/2037" itemLabel="2036/2037"/>
+                        <f:selectItem itemValue="2037/2038" itemLabel="2037/2038"/>
+                        <f:selectItem itemValue="2038/2039" itemLabel="2038/2039"/>
+                        <f:selectItem itemValue="2039/2040" itemLabel="2039/2040"/>
+                        </h:selectOneMenu>
+                        <h:selectOneMenu value="#{classreportController.term}" onchange="submit()" class="form-control">
+                            <f:selectItem itemValue="" itemLabel="Select Term"/>
+                            <f:selectItem itemValue="1ST TERM" itemLabel="1ST TERM"/>
+                            <f:selectItem itemValue="2ND TERM" itemLabel="2ND TERM"/>
+                            <f:selectItem itemValue="3RD TERM" itemLabel="3RD TERM"/>
+                        </h:selectOneMenu>
+                        <h:selectOneMenu value="#{computeresultController.level}" onchange="submit()" class="form-control">
+                            <f:selectItem itemValue="" itemLabel="Select Level"/>
+                            <f:selectItem itemValue="10" itemLabel="Pre-Nursery"/>
+                            <f:selectItem itemValue="101" itemLabel="Nursery One"/>
+                            <f:selectItem itemValue="102" itemLabel="Nursery Two"/>
+                            <f:selectItem itemValue="103" itemLabel="Nursery Three"/>
+                            <f:selectItem itemValue="100" itemLabel="Primary One"/>
+                            <f:selectItem itemValue="200" itemLabel="Primary Two"/>
+                            <f:selectItem itemValue="300" itemLabel="Primary Three"/>
+                            <f:selectItem itemValue="400" itemLabel="Primary Four"/>
+                            <f:selectItem itemValue="500" itemLabel="Primary Five"/>
+                            <f:selectItem itemValue="600" itemLabel="Primary Six"/>
+                            <f:selectItem itemValue="1" itemLabel="Basic 7"/>
+                        <f:selectItem itemValue="2" itemLabel="Basic 8"/>
+                        <f:selectItem itemValue="3" itemLabel="Basic 9"/>
+                        <f:selectItem itemValue="4" itemLabel="SSS 1"/>
+                        <f:selectItem itemValue="5" itemLabel="SSS 2"/>
+                        <f:selectItem itemValue="6" itemLabel="SSS 3"/>
+                        <f:selectItem itemValue="7" itemLabel="Pure Science"/>
+                        <f:selectItem itemValue="8" itemLabel="Social Science"/>
+                        <f:selectItem itemValue="9" itemLabel="Arts"/>
+                        <f:selectItem itemValue="11" itemLabel="Extra class"/>
+                        </h:selectOneMenu>
+                    
+                        <h:selectOneMenu value="#{classreportController.classcode}" onchange="submit()" class="form-control">
+                            <f:selectItem itemValue="" itemLabel="Select Class"/>
+                            <f:selectItems value="#{computeresultController.classByLevel}" var="class" itemValue="#{class.classcode}" itemLabel="#{class.classcode}"/>
+                        </h:selectOneMenu>
+                        <h:selectOneMenu value="#{classreportController.min_number}" class="form-control">
+                            <f:selectItem itemValue="" itemLabel="No of subjects"/>
+                            <f:selectItem    itemValue="1" itemLabel="1"/>
+                            <f:selectItem    itemValue="2" itemLabel="2"/>
+                            <f:selectItem    itemValue="3" itemLabel="3"/>
+                            <f:selectItem    itemValue="4" itemLabel="4"/>
+                            <f:selectItem    itemValue="5" itemLabel="5"/>
+                            <f:selectItem    itemValue="6" itemLabel="6"/>
+                            <f:selectItem    itemValue="7" itemLabel="7"/>
+                            <f:selectItem    itemValue="8" itemLabel="8"/>
+                            <f:selectItem    itemValue="9" itemLabel="9"/>
+                            <f:selectItem    itemValue="10" itemLabel="10"/>
+                            <f:selectItem    itemValue="11" itemLabel="11"/>
+                            <f:selectItem    itemValue="12" itemLabel="12"/>
+                            <f:selectItem    itemValue="13" itemLabel="13"/>
+                            <f:selectItem    itemValue="14" itemLabel="14"/>
+                            <f:selectItem    itemValue="15" itemLabel="15"/>
+                            <f:selectItem    itemValue="16" itemLabel="16"/>
+                            <f:selectItem    itemValue="17" itemLabel="17"/>
+                        </h:selectOneMenu>
+                    <h:commandButton class="btn-success" style=" cursor: pointer"  action="#{classreportController.classResult()}" value="Compute Result">
+                    </h:commandButton>
+                    </div>
+                    <div class="col-8" style=" background: #F1C050">
+                        <h:dataTable binding="#{table}" value="#{classreportController.findBySessionTerm}" var="stud" rowClasses="oddrows,evenrows" rules="all" width="100%" styleClass="people">
+                            <h:column>
+                                <f:facet name="header">
+                                    S/N
+                                </f:facet>
+                                <center> #{table.rowIndex+1}</center>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Name
+                                </f:facet>
+                                #{stud.name}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Total
+                                </f:facet>
+                                <center>   #{stud.finaltotal}</center>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Average
+                                </f:facet>
+                                <center>     #{stud.finalaverage} </center>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    class pos
+                                </f:facet>
+                                <center>      #{stud.classposition} </center>
+                            </h:column>
+
+                            <h:column>
+                                <f:facet name="header">
+                                    Action
+                                </f:facet>
+                                <h:commandLink action="#{classreportController.viewResultbank(stud.code)}"  value="View Result"  style=" color: green"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Remove Student
+                                </f:facet>
+                                <h:commandLink action="#{classreportController.deleteStuden(stud.regno)}"  value="delete"  style=" color: red"/>
+                            </h:column>
+                        </h:dataTable>
+                    </div>
+                    
+                    <div class="col s12 m2">
+                        <h:commandButton class="btn-success" style=" cursor: pointer"  action="#{classreportController.setPosition()}" value="Set Position">
+                        </h:commandButton><br/><br/>
+                        <h6><h:outputText value="#{classreportController.jkd}" style="color: orangered"/></h6><br/><br/>
+                        <br/><br/>
+                        <h:commandButton class="btn-danger" style=" cursor: pointer"  action="#{classreportController.deleteStudents()}" value="Clear Result">
+                        </h:commandButton><br/><br/>
+
+                    </div>
+                </div>
+         </center>
+        </h:form>
+
+        <script>
+            $(document).on("ready", function () {
+                $('select').material_select();
+            });
+        </script>
+    </h:body>
+</html>
+

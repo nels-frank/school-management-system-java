@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>all students</title>
+         <link rel="stylesheet" href="css/materialize.min.css"/>
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <link rel="stylesheet" href="css/fonts.googleapis.com/css?family=Montserrat"/>
+        <style>
+            
+            tr.oddrows {
+                background-color: #333333;
+                color: yellowgreen;
+            }
+
+
+            tr.evenrows {
+                background-color: #0d253d;
+                color: white;
+            }
+            table{
+                width: 80%
+            }
+            table.people th{
+                background-color: #0d253d;
+                color: white;
+            }
+            a{
+                color:white;
+            }
+        
+        </style>
+    </h:head>
+    <h:body style="background: #333333; color:yellow">
+      <center>   
+          <span style="font-size: 25px; color: yellowgreen">    Total Students:     <h:outputText value=" #{studentsinfoController.totalStudents}" /></span>
+
+          <h:dataTable binding="#{table}" value="#{studentsinfoController.allStuddentsinfo}" var="stud" rowClasses="oddrows,evenrows" rules="all" width="60%" border="1" styleClass="people">
+                            <h:column>
+                                <f:facet name="header">
+                                    S/N
+                                </f:facet>
+                                <center>   <h:outputText value="#{table.rowIndex+1}" /></center>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Regno
+                                </f:facet>
+                                <h:outputText value="#{stud.regno}" />
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    first Name
+                                </f:facet>
+                                <h:outputText value="#{stud.fname}" />
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Middle Name
+                                </f:facet>
+                                <h:outputText value="#{stud.mname}" />
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Last Name
+                                </f:facet>
+                                <h:outputText value="#{stud.lname}" />
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Admitted Level
+                                </f:facet>
+                                <h:outputText value="#{stud.level}" />
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                Class
+                                </f:facet>
+                                <h:outputText value="#{stud.classcode}" />
+                            </h:column>
+                           
+
+                        </h:dataTable>
+                    </center>
+    </h:body>
+</html>
+

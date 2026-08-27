@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Total Expenses made</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="plugins/cubeportfolio/css/cubeportfolio.min.css"/>
+        <link href="css/nivo-lightbox.css" rel="stylesheet" />
+        <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+        <link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
+        <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
+        <link href="css/animate.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet"/>
+
+        <!-- boxed bg -->
+        <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+        <!-- template skin -->
+        <link id="t-colors" href="color/default.css" rel="stylesheet"/>
+    </h:head>
+    <h:body>
+        <div id="page-top" data-spy="scroll" data-target=".navbar-custom">
+            <div id="wrapper">
+                <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="background:orangered" >
+
+                    <div class="container navigation" >
+
+                        <div class="navbar-header page-scroll">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                                <i class="fa fa-bars"></i>
+                            </button>                        
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container -->
+                </nav>
+               <!-- Section: intro -->
+                <section id="intro" class="intro">
+                    <div class="intro-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-10">
+                                    <div class="form-wrapper">
+                                        <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+
+                                            <div class="panel panel-skin">
+                                                <div class="panel-heading" style="background: orangered" >
+                                                    <h5 class="panel-title"><span class="fa fa-pencil-square-o"></span> All Expenses<small>(It's free!)</small></h5>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <br></br>
+                                                    <div id="errormessage"></div>
+
+                                                    <h:form role="form" class="contactForm lead">
+
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <h:dataTable binding="#{table}" value="#{sessionaccountController.sessionStatement}" var="products" rowClasses="oddrows,evenrows" style="font-size: 12px;" rules="all" width="100%" styleClass="people" class="table table-striped">
+                                                                    <h:column>
+                                                                        <f:facet name="header">
+                                                                            SN
+                                                                        </f:facet>
+                                                                      <center>#{table.rowIndex+1}</center>
+                                                                    </h:column>
+                                                                    <h:column>
+                                                                        <f:facet name="header">
+                                                                        Date Closed
+                                                                        </f:facet>
+                                                                        <h:outputText value="#{products.dayofclosure}" />
+                                                                    </h:column>
+                                                                    <h:column>
+                                                                        <f:facet name="header">
+                                                                            Time
+                                                                        </f:facet>
+                                                                        <h:outputText value="#{products.timeofclosure}" />
+                                                                    </h:column>
+                                                                    <h:column>
+                                                                        <f:facet name="header">
+                                                                            Session
+                                                                        </f:facet>
+                                                                        <h:outputText value="#{products.sessions}" />
+                                                                    </h:column>                                                                   
+                                                                  <h:column>
+                                                                        <f:facet name="header">
+                                                                     Session Amount
+                                                                        </f:facet>
+                                                                      <h:outputText value="NGN #{products.sessionobtained}" />
+                                                                    </h:column>
+                                                                     <h:column>
+                                                                        <f:facet name="header">
+                                                                     Session Expenditure
+                                                                        </f:facet>
+                                                                         <h:outputText value="NGN #{products.sessionexpenses}" />
+                                                                    </h:column>                                                                     
+                                                                    <h:column>
+                                                                        <f:facet name="header">
+                                                                     Took Home
+                                                                        </f:facet>
+                                                                        <h:outputText value="NGN #{products.tookhome}" />
+                                                                    </h:column>
+                                                                     <h:column >
+                                                                    <f:facet name="header">
+                                                                          Action
+                                                                    </f:facet>
+                                                                         <h:commandLink  action="#{sessionaccountController.DeletSesAccount(products.sessions)}" value="Delete"  style=" color: green"/>
+                                                                   </h:column> 
+                                                                </h:dataTable>
+                                                            </div>
+                                                     </div>
+                                                    </h:form>
+                                                </div>				
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>		
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+           </div>
+        </div>
+       <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+           <!-- Core JavaScript Files -->
+            <script src="designs/js/jquery.min.js"></script>	 
+            <script src="designs/js/bootstrap.min.js"></script>
+            <script src="designs/js/jquery.easing.min.js"></script>
+            <script src="designs/js/wow.min.js"></script>
+            <script src="designs/js/jquery.scrollTo.js"></script>
+            <script src="designs/js/jquery.appear.js"></script>
+            <script src="designs/js/stellar.js"></script>
+            <script src="designs/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+            <script src="designs/js/owl.carousel.min.js"></script>
+            <script src="designs/js/nivo-lightbox.min.js"></script>
+            <script src="designs/js/custom.js"></script>
+            <script src="designs/contactform/contactform.js"></script>
+    </h:body>
+</html>
+
