@@ -1,169 +1,282 @@
-# Emailing & Survey Platform
+# School Management System — Java EE
 
-### Full-Stack Emailing and Survey Management Platform
+### Full-Stack Java Enterprise School Management System
 
-A full-stack web application designed to provide individuals and organizations with tools for creating, distributing and reviewing surveys while supporting user authentication, email communication and payment processing.
+A comprehensive school management application developed in **2022** to support student administration, academic result computation, fee management, staff/user administration and other core school operations.
+
+This project was developed using **Java EE, JSF, MySQL and GlassFish**, and represents an important stage in my progression as a software developer.
 
 ---
 
-## 🚀 Live Project
+## 🚀 Project Overview
 
-https://emailing-mz0f.onrender.com
+The School Management System was designed to provide schools with a centralized application for managing academic, administrative and financial operations.
+
+The system brings several school processes together within one application, reducing the need for separate manual processes and providing administrators and school personnel with structured access to important information.
+
+### Major Areas Covered
+
+* Student Management
+* Student Profiles
+* Result Management
+* Result Computation
+* Subject Management
+* Class Management
+* Teacher Allocation
+* Fees Management
+* Expenditure Management
+* User Management
+* Student Result Printing
+* Student Profile Printing
+* Financial Receipts
 
 ---
 
 ## 📸 Project Preview
 
-![Landing Page](public/LandingPage.JPG)
+![School Management System](src/LandingPage.JPG)
 
 ---
 
 ## ✨ Key Features
 
-* 📧 Email-based communication
-* 📋 Survey creation
-* 📝 Survey review and management
-* 📊 Dashboard
-* 🔐 User authentication
-* 🔑 Google OAuth authentication
-* 👤 Session-based authentication
-* 💳 Stripe payment integration
-* 🔄 Stripe webhook processing
-* 📬 Mailgun email delivery
-* 🗄️ MongoDB data management
-* 📱 Responsive design
-* 🔌 REST API integration
+### 👨‍🎓 Student Management
+
+* Student registration and management
+* Student profile management
+* Student listing
+* Student information viewing
+* Student profile printing
+* Student result viewing
+
+### 📊 Result Management
+
+* Result computation
+* Class result computation
+* Subject result computation
+* Affective domain computation
+* Computed subjects management
+* Result management dashboard
+* Student result printing
+* Full result printing
+
+### 👨‍🏫 Academic Administration
+
+* Subject management
+* Form teacher allocation
+* Head teacher replacement
+* Class-based academic management
+
+### 💰 Fees Management
+
+* Fees management dashboard
+* Student fee payment
+* Payment using registration number
+* Payment confirmation
+* Payment receipts
+* Fees management authentication
+
+### 💼 Financial Management
+
+* Expenditure management
+* Financial record management
+* Fee payment tracking
+* Payment receipt generation
+
+### 👥 User Management
+
+* User dashboard
+* User authentication
+* Administrative access
+* Role-based system functionality
 
 ---
 
-## 📸 Screenshots
+# 📸 Screenshots
+
+## 🏠 System Interface
 
 ### Landing Page
 
-![Landing Page](public/LandingPage.JPG)
+![Landing Page](src/LandingPage.JPG)
 
-### Dashboard
+### User Dashboard
 
-![Dashboard](public/Dashboard.JPG)
-
-### Create Survey
-
-![Create Survey](public/CreateSurvey.JPG)
-
-### Survey Review
-
-![Survey Review](public/SurveyReview.JPG)
-
-### Received Survey
-
-![Received Survey](public/RecievedSurvey.JPG)
-
-### Stripe Payment
-
-![Stripe Payment](public/StripePayment.JPG)
+![User Dashboard](src/UserDashboard.JPG)
 
 ---
 
-## 📱 Mobile Screenshots
+## 👨‍🎓 Student Management
 
-### Mobile Landing Page
+### All Students — First View
 
-![Mobile Landing Page](public/MobilView-LandingPage.png)
+![All Students First View](src/AllStudentsFirstView.JPG)
 
-### Mobile Authentication
+### All Students List
 
-![Mobile Authentication](public/MobileView-Authentication.png)
+![All Students List](src/AllStudentsList.JPG)
 
-### Mobile Dashboard
+### Student Profile — Part A
 
-![Mobile Dashboard](public/MobileView-Dashboard.png)
+![Student Profile A](src/StudentProfileA.JPG)
 
-### Mobile Create Survey
+### Student Profile — Part B
 
-![Mobile Create Survey](public/MobileView-CreateSurvey.png)
+![Student Profile B](src/StudentProfileB.JPG)
 
-### Mobile Stripe Payment
+### Student Profile Printout
 
-![Mobile Stripe Payment](public/MobileView-StripPayment.png)
+![Student Profile Printout](src/StudentProfilePrintOut.JPG)
 
 ---
 
-## 🛠️ Technology Stack
+## 📊 Result Management
 
-### Frontend
+### Result Management Login
 
-* React
-* Next.js
-* Redux
-* React Hook Form
+![Result Management Login](src/ResultManagementLogin.JPG)
+
+### Result Computation Dashboard
+
+![Result Computation Dashboard](src/ResultComputationDashboard.JPG)
+
+### Class Result Computation
+
+![Class Result Computation](src/ClassResultComputation.JPG)
+
+### Subject Computation by Class
+
+![Subject Computation by Class](src/SubjectComputationByClass.JPG)
+
+### Affective Domain Computation
+
+![Affective Domain Computation](src/AffectiveDomainComputation.JPG)
+
+### Computed Subjects List
+
+![Computed Subjects List](src/ComputedSubjectsList.JPG)
+
+---
+
+## 📝 Student Results
+
+### Student Result — Part A
+
+![Student Result A](src/StudentResultA.JPG)
+
+### Student Result — Part B
+
+![Student Result B](src/StudentResultB.JPG)
+
+### Print Student Result
+
+![Print Student Result](src/PrintStudentResult.JPG)
+
+### Full Printed Result
+
+![Full Printed Result](src/FullPrintedResult.JPG)
+
+---
+
+## 💰 Fees Management
+
+### Fees Management Login
+
+![Fees Management Login](src/FeesManagementLogin.JPG)
+
+### Fees Dashboard
+
+![Fees Dashboard](src/FeesDashboard.JPG)
+
+### Fees Payment with Registration Number
+
+![Fees Payment With Registration Number](src/FeesPaymentWithRegNo.JPG)
+
+### Payment Confirmation
+
+![Fees Payment Confirmation](src/FeesPaymentConfirmation.JPG)
+
+### Fees Payment Receipt
+
+![Fees Payment Receipt](src/FeesPaymentReciept.JPG)
+
+### Fees Payment Receipt — Additional View
+
+![Fees Payment Recipt](src/FeesPaymentRecipt.JPG)
+
+---
+
+## 💼 Financial Management
+
+### Expenditure Management
+
+![Expenditure Management](src/ExpenditureManagement.JPG)
+
+---
+
+## 👨‍🏫 Academic Administration
+
+### Form Teacher Allocation
+
+![Form Teacher Allocation](src/FormTeacherAllocation.JPG)
+
+### Head Teacher Replacement
+
+![Head Teacher Replacement](src/HeadTeacherReplacement.JPG)
+
+---
+
+# 🛠️ Technology Stack
 
 ### Backend
 
-* Node.js
-* Express.js
+* Java
+* Java EE
+
+### Frontend
+
+* JSF (JavaServer Faces)
 
 ### Database
 
-* MongoDB
-* Mongoose
+* MySQL
 
-### Authentication
+### Application Server
 
-* Google OAuth
-* Express Session
+* GlassFish
 
-### Email Services
+### Development Environment
 
-* Mailgun
-
-### Payments
-
-* Stripe
-* Stripe Checkout
-* Stripe Webhooks
-
-### Deployment
-
-* Vercel
-* Render
+* NetBeans
+* Java Development Kit (JDK)
 
 ---
 
-## 🏗️ Application Architecture
+# 🏗️ Application Architecture
 
-The application uses a full-stack architecture consisting of a modern frontend, Node.js/Express backend, MongoDB database and external service integrations.
+The application follows a Java enterprise application architecture in which the presentation layer communicates with the application's business logic and database.
 
 ```text
 User
  ↓
-React / Next.js Frontend
+JSF User Interface
  ↓
-Express REST API
+Java EE Application
  ↓
-Node.js Backend
+Business Logic
  ↓
-Mongoose
+Database Access
  ↓
-MongoDB
+MySQL Database
 ```
 
-External services are integrated into the backend where required:
-
-```text
-                 ┌── Google OAuth
-                 │
-Frontend → Backend ├── Mailgun
-                 │
-                 └── Stripe
-                      ↓
-                 Stripe Webhooks
-```
+The application is deployed and executed through **GlassFish Server**, providing the runtime environment for the Java EE application.
 
 ---
 
-## 🔄 Application Workflow
+# 🔄 Application Workflow
 
-The general application workflow is:
+A typical system workflow follows this pattern:
 
 ```text
 User
@@ -172,245 +285,207 @@ Authentication
  ↓
 Dashboard
  ↓
-Create / Manage Survey
+Select Management Module
  ↓
-Backend API
+Application Processing
  ↓
-MongoDB
+Database Operation
  ↓
-Email / Survey Processing
+Result / Record
  ↓
-Recipient
- ↓
-Survey Review / Response
+User Interface
 ```
 
-For payment-enabled functionality:
-
-```text
-User
- ↓
-Stripe Checkout
- ↓
-Stripe
- ↓
-Webhook
- ↓
-Backend
- ↓
-Database Update
-```
+Different modules provide specialized workflows for students, academic results, fees and financial management.
 
 ---
 
-## ⚙️ Getting Started
+# ⚙️ Getting Started
 
-### Prerequisites
+## Prerequisites
 
-* Node.js
-* npm
-* MongoDB
+To run the project locally, you would typically need:
+
+* Java JDK
+* NetBeans IDE
+* GlassFish Server
+* MySQL Server
+* MySQL database configuration
 * Git
 
-### Installation
+## Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/nels-frank/Emailing.git
+git clone https://github.com/nels-frank/school-management-system-java.git
 ```
 
-Navigate into the project:
+Navigate into the project directory:
 
 ```bash
-cd Emailing
+cd school-management-system-java
 ```
 
-Install dependencies:
+Open the project using **NetBeans IDE**.
 
-```bash
-npm install
-```
-
-If the project contains separate frontend and backend applications, install the dependencies within their respective directories according to the project structure.
+Configure the application according to the project's Java EE and GlassFish configuration.
 
 ---
 
-## 🔐 Environment Variables
+# 🗄️ Database Setup
 
-Create the appropriate `.env` configuration files required by the application.
+The application uses **MySQL** as its database system.
 
-Typical configuration may include:
+Create/configure the required database and update the application's database connection configuration to point to the local MySQL server.
 
-```env
-MONGODB_URI=
-SESSION_SECRET=
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
-MAILGUN_API_KEY=
-STRIPE_SECRET_KEY=
-STRIPE_WEBHOOK_SECRET=
-```
+The database configuration should contain the appropriate:
 
-The exact environment variables should match the application's configuration.
+* Database name
+* Username
+* Password
+* Host
+* Port
 
-**Never commit API keys, passwords, OAuth secrets, Stripe secrets or other sensitive credentials to GitHub.**
+Database credentials should never be committed to the repository.
 
 ---
 
-## ▶️ Running the Application
+# ▶️ Running the Application
 
-Install the project dependencies and start the application using the commands defined in the project's `package.json`.
+After configuring the database and GlassFish Server:
 
-For a typical development environment:
-
-```bash
-npm run dev
-```
-
-If the application uses separate frontend and backend processes, start each service according to the project's configuration.
-
----
-
-## ☁️ Deployment
-
-The application uses modern cloud deployment services for production hosting.
-
-### Frontend
-
-**Vercel**
-
-### Backend
-
-**Render**
-
-Production environment variables are configured through the respective hosting platforms.
+1. Open the project in NetBeans.
+2. Configure the GlassFish application server.
+3. Configure the MySQL database connection.
+4. Build the application.
+5. Deploy the application to GlassFish.
+6. Start the GlassFish server.
+7. Open the deployed application in a web browser.
 
 ---
 
-## 🔗 Integrations
+# ☁️ Deployment
 
-### Google OAuth
+The original application was developed as a **Java EE enterprise application** and designed to run on **GlassFish Server**.
 
-Google OAuth provides an alternative authentication method for users.
-
-### Mailgun
-
-Mailgun is used for email delivery and email-related functionality.
-
-### Stripe
-
-Stripe provides payment processing through Stripe Checkout.
-
-Stripe webhooks allow the application to receive and process payment events from Stripe on the backend.
+Unlike the modern school management project, this application represents an earlier generation of enterprise web application architecture.
 
 ---
 
-## 🧩 Challenges & Solutions
+# 🧩 Challenges & Solutions
 
-### Authentication Integration
+## Managing Multiple School Operations
 
-Integrating Google OAuth with application-based authentication required proper handling of user sessions and authentication callbacks.
+The system needed to support several different areas of school administration within one application.
 
 **Solution:**
-Implemented Google OAuth alongside session-based authentication to provide secure user authentication.
+The application was organized into functional modules covering student management, academic results, fees, financial operations and user management.
 
-### Email Service Integration
+## Result Computation
 
-The application required a reliable external email delivery service.
-
-**Solution:**
-Integrated Mailgun into the backend to handle application email delivery.
-
-### Payment Processing
-
-Payment functionality required secure communication between the application and Stripe.
+Academic results required several different computations, including class results, subject results and affective-domain assessments.
 
 **Solution:**
-Implemented Stripe Checkout and backend webhook processing to handle payment events.
+Dedicated result management and computation functionality was developed to process and present academic information.
 
-### Webhook Processing
+## Student Records
 
-Payment events needed to be received and processed reliably by the backend.
-
-**Solution:**
-Implemented Stripe webhook handling and server-side event processing.
-
-### Production Deployment
-
-The application required separate frontend and backend deployment environments.
+Student information needed to be accessible across different areas of the system.
 
 **Solution:**
-Configured the application for cloud deployment using Vercel for the frontend and Render for backend services, with sensitive configuration supplied through environment variables.
+Student information was organized into structured profiles and connected to related academic and administrative records.
 
-### Responsive Design
+## Fees Management
 
-The application needed to remain usable across desktop, tablet and mobile devices.
+The system needed to support fee payments and provide confirmation and receipt functionality.
 
 **Solution:**
-Implemented responsive interfaces and layouts for different screen sizes.
+A dedicated fees management module was implemented with payment lookup, confirmation and receipt-generation functionality.
+
+## Enterprise Deployment
+
+The application needed an appropriate Java enterprise runtime environment.
+
+**Solution:**
+The system was developed for deployment through **GlassFish Server**, providing the Java EE runtime required by the application.
 
 ---
 
-## 🔒 Security
+# 🔒 Security Considerations
 
-* Sensitive credentials are stored through environment variables.
-* API keys and secrets are not committed to the repository.
-* Authentication is handled through secure application mechanisms.
-* Google OAuth credentials are kept server-side.
-* Stripe secret keys are kept server-side.
-* Stripe webhook secrets are used to validate webhook requests.
-* Database credentials are not exposed in the frontend.
-* Production secrets are configured through hosting environments.
+* Authentication is used to restrict access to management functions.
+* Database credentials should be kept outside publicly accessible source code.
+* Administrative functions should be protected according to user permissions.
+* Production credentials should never be committed to GitHub.
 
 ---
 
-## 📚 What I Learned
+# 📚 What I Learned
 
-Building this project strengthened my practical experience with:
+Developing this project strengthened my understanding of enterprise application development and provided practical experience with:
 
-* React and Next.js
-* Redux
-* Node.js and Express
-* MongoDB and Mongoose
-* Google OAuth
-* Session-based authentication
-* REST API development
-* Mailgun integration
-* Stripe Checkout
-* Stripe webhooks
-* Environment configuration
-* Full-stack application architecture
-* Production deployment
-* Frontend/backend debugging
-* Responsive web development
+* Java
+* Java EE
+* JSF
+* MySQL
+* GlassFish
+* Enterprise web application architecture
+* Database-driven application development
+* Student information management
+* Academic result computation
+* Financial management systems
+* Authentication
+* Application deployment
 
 ---
 
-## 🚀 Future Improvements
+# 🔄 Development Journey
 
-* Advanced survey analytics
-* Expanded email campaign functionality
-* Improved survey reporting
-* Additional authentication options
-* Enhanced user management
-* Advanced payment and subscription features
-* More comprehensive notification systems
-* Improved administrative tools
+This project is an important part of my development journey.
 
----
+### 2022
 
-## 📌 Project Status
+**Java • Java EE • JSF • MySQL • GlassFish**
 
-**Production Deployment**
+↓
 
-The application has been developed as a full-stack production project integrating authentication, email services, survey functionality and payment processing.
+### 2026
+
+**Next.js • TypeScript • Node.js • Prisma • PostgreSQL**
+
+The 2022 system established my experience with enterprise Java application development, while my 2026 School Management System demonstrates my transition into modern full-stack web development.
 
 ---
 
-## 👨‍💻 Author
+# 🚀 Future Improvements
 
-### Adzua Terhemen Frank
+If this system were to be modernized further, potential improvements could include:
+
+* Migration to a modern TypeScript/Next.js architecture
+* RESTful backend services
+* Modern responsive UI
+* Cloud deployment
+* Advanced analytics and reporting
+* Online payment gateway integration
+* Automated notifications
+* Parent and student portals
+* Enhanced role-based access control
+* Mobile-focused experience
+
+---
+
+# 📌 Project Status
+
+**Completed — 2022**
+
+This project is maintained as part of my professional software development portfolio and demonstrates my experience with Java enterprise application development.
+
+---
+
+# 👨‍💻 Author
+
+## Adzua Terhemen Frank
 
 **Full-Stack Software Developer**
 
@@ -431,6 +506,6 @@ https://www.linkedin.com/in/adzua-frank-523302324/
 
 ---
 
-## 📄 License
+# 📄 License
 
 This project is presented as a professional portfolio project.
